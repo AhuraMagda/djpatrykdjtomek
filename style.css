@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* przeźroczysty */
+nav {
+    background-color: #000000;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    z-index: 2;
+    color: white;
+}
+
+.logo {
+    height: 100px;
+    border-radius: 50%;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    padding: 10px;
+    list-style: none;
+    color: white;
+}
+
+header {
+    align-items: center;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh; 
+    position: relative;
+}
+
+header h1 {
+    font-size: 45px;
+    color: white;
+    z-index: 1;
+}
+
+header p {
+    font-size: 25px;
+    color: white;
+    z-index: 1;
+}
+
+.back-img {
+    width: 1100px;
+    position: absolute;
+    opacity: ;
+}
+
+.section-about-us {
+    background-color: pink;
+}
+
+.about-us-profile-photo {
+    height: 400px;
+}
+
+.section-about-us p {
+    width: 500px;
+}
+
+.section-photos {
+    background-color: aqua;
+}
+
+.section-videos {
+    background-color: aquamarine;
+}
+
+.section-prices {
+    background-color: burlywood;
+}
+
+.section-contact {
+    background-color: darkkhaki;
+}
