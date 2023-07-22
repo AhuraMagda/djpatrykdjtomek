@@ -59,15 +59,12 @@ header {
 }
 
 .header-wrapper {
-    
     align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 100px;
     position: relative;
-
-
 }
 
 .back-img {
@@ -76,7 +73,7 @@ header {
     position: absolute;
     top: -300px;
     left: -400px;
-    animation: infinite-spinning 20s infinite alternate;
+    /* animation: infinite-spinning 20s infinite alternate; */
 }
 
 @keyframes infinite-spinning {
@@ -106,12 +103,18 @@ header h1 {
     z-index: 1;
 }
 
-header p {
+.header-wrapper p {
     font-size: 25px;
     color: var(--logo-pink);
     z-index: 1;
+    position: absolute;
+    transition: top 1s;
+    top: 110px;
 }
 
+.intro-up-1, .intro-up-2, .intro-up-3, .intro-down-1, .intro-down-2, .intro-down-3 {
+    display: none;
+}
 
 /* section O NAS */
 
