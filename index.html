@@ -5,28 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Lato -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
+     
     <link rel="stylesheet" href="./style.css" type="text/css">
 </head>
 <body>
     <nav>
-        <!-- <img class="logo" src="./images/logo.jpg" alt=""> -->
-        <h1>DJ PATRYK DJ TOMEK</h1>
+        <img class="logo" src="./images/logo_color.svg" alt="">
         <ul>
-            <li>Strona główna</li>
-            <li>Galeria</li>
-            <li>Kontakt</li>
-            <li>Cennik</li>
+            <li>STRONA GŁÓWNA</li>
+            <li>GALERIA</li>
+            <li>KONTAKT</li>
+            <li>CENNIK</li>
         </ul>
     </nav>
     <header>
-        <p>Gale</p>
-        <p>Imprezy Firmowe</p>
-        <p>Wydarzenia okolicznościowe</p>
-        <h1>PROFESJONALNA OBSŁUGA DJ</h1>
-        <p>Zabawyyyyyyy sylwesterowe</p> 
-        <p>Przyjęcia urodzinowe</p>
-        <p>Wesela</p>
-        <!-- <img class="back-img" src="./images/logo.jpg" alt=""> -->
+        <div class="header-wrapper">
+            <p>Gale</p>
+            <p>Imprezy Firmowe</p>
+            <p>Wydarzenia okolicznościowe</p>
+            <h1>PROFESJONALNA OBSŁUGA DJ</h1>
+            <p>Zabawyyyyyyy sylwesterowe</p> 
+            <p>Przyjęcia urodzinowe</p>
+            <p>Wesela</p>
+        </div>
+
+        <img class="back-img" src="./images/niemafal.png" alt="">
     </header>
     <main>
         <section class="section-about-us">
@@ -37,11 +44,11 @@
             </div>
             <div>
                 <ul>
-                    <li><img class="about-us-icon" src="images/icon.svg" alt="">muzyka</li>
-                    <li><img class="about-us-icon" src="images/icon.svg" alt="">oświetlenie</li>
-                    <li><img class="about-us-icon" src="images/icon.svg" alt="">coś tam</li>
-                    <li><img class="about-us-icon" src="images/icon.svg" alt="">dym</li>
-                    <li><img class="about-us-icon" src="images/icon.svg" alt="">arono</li>
+                    <li>oświetlenie</li>
+                    <li>coś tam</li>
+                    <li>dym</li>
+                    <li>arono</li>
+                    <li>muzyka</li>
                 </ul>
             </div>
         </section>
@@ -77,7 +84,14 @@
             <h2>Cennik</h2>
         </section>
         <section class="section-contact">
-            <h2>Kontakt</h2>
+
+            <form class="contact-form" action="">
+                <h2>Formularz</h2>
+                <input type="text" placeholder="Imię">
+                <input type="text" placeholder="Nazwisko">
+                <input type="text" placeholder="Data">
+                <input type="text" placeholder="Treść">
+            </form>
         </section>
     </main>
     <footer>
