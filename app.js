@@ -50,5 +50,6 @@ const moveIntroText = () => {
 
 }
 
+moveIntroText()
 
-navLogo.addEventListener("click", moveIntroText)
+// navLogo.addEventListener("click", moveIntroText)

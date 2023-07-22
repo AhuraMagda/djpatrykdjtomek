@@ -68,12 +68,12 @@ header {
 }
 
 .back-img {
-    opacity: .5;
+    opacity: .2;
     height: 1400px;
     position: absolute;
     top: -300px;
     left: -400px;
-    /* animation: infinite-spinning 20s infinite alternate; */
+    animation: infinite-spinning 20s infinite alternate;
 }
 
 @keyframes infinite-spinning {
