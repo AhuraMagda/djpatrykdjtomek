@@ -4,18 +4,9 @@
 
 
 
+// HEADER text appearing
 
-
-
-
-
-
-
-
-
-// text appearing
-
-const navLogo = document.querySelector(".logo")
+const navLogo = document.querySelector(".logo");
 
 const introTextUp1 = document.querySelector(".intro-up-1");
 const introTextUp2 = document.querySelector(".intro-up-2");
@@ -44,12 +35,29 @@ const moveIntroText = () => {
     
         introTextDown1.style.top = "155px";
         introTextDown2.style.top = "190px";
-        introTextDown3.style.top = "220px"
+        introTextDown3.style.top = "220px";
     }, "1")
-
-
 }
 
 moveIntroText()
 
 // navLogo.addEventListener("click", moveIntroText)
+
+// GALLERY IMAGES - change opacity
+
+const galleryImages = document.querySelectorAll(".gallery-image")
+console.log(galleryImages)
+
+const changeOpacity = (image) => {
+    image.style.opacity = image.style.opacity === "1" ? ".5" : "1";
+}
+
+const showBigImage = (image) => {
+    return
+}
+
+galleryImages.forEach(image => {
+    image.addEventListener("mouseover", function() {changeOpacity(image)})
+    image.addEventListener("mouseout", function() {changeOpacity(image)})
+    }
+)

@@ -56,6 +56,7 @@ header {
     justify-content: center;
     height: 100vh; 
     position: relative;
+    overflow: hidden;
 }
 
 .header-wrapper {
@@ -162,21 +163,22 @@ header h1 {
 /* section GALERIA */
 
 .section-photos {
-
+    overflow: hidden;
 }
 
 .gallery-container {
     display: grid;
-    height: 100vh;
-    width: 100vw;
     grid-template-columns: repeat(5, 1fr);
+    height: 100vh;
     overflow: hidden;
+    width: 100vw;
 }
 
-.gallery-container img {
-    width: 100%;
+.gallery-image {
     height: 100%;
     object-fit: cover;
+    width: 100%;
+    opacity: 0.5;
 }
 
 /* section VIDEOS */
@@ -185,10 +187,6 @@ header h1 {
     background: linear-gradient(217deg, var(--logo-orange), rgba(255,0,0,0) 70.71%), 
     linear-gradient(127deg, rgb(255 129 0 / 80%), rgba(0,255,0,0) 70.71%), 
     linear-gradient(336deg, rgb(191 54 13 / 80%), rgba(0,0,255,0) 70.71%);
-    display: flex;
-    flex-wrap: wrap;
-    padding: 200px;
-    overflow: hidden;
 }
 
 .section-videos iframe {
@@ -197,26 +195,78 @@ header h1 {
 }
 
 /* cennik */
-.section-prices {
-    background: linear-gradient(217deg, var(--logo-orange), rgba(255,0,0,0) 70.71%), 
-    linear-gradient(127deg, rgb(255 129 0 / 80%), rgba(0,255,0,0) 70.71%), 
-    linear-gradient(336deg, rgb(191 54 13 / 80%), rgba(0,0,255,0) 70.71%);
+.section-offer {
+    flex-direction: column;
+    background: white;
 }
 
+.section-offer-wrapper {
+    display: flex;
+}
+
+.offer-box {
+    background-color: var(--background-blue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    margin: 20px;
+    width: 200px;
+    border-radius: 20px;
+}
+
+.offer-box h3 {
+    padding: 25px 5px 15px 5px;
+}
+
+/* KONTAKT */
 .section-contact {
     background-color: white;
+    
+}
+
+.contact-wrapper {
+    position: relative;
+    background-color: var(--logo-orange);
+    width: 100%;
+    height: fit-content;
+    padding: 50px 0px;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
-    background-color: var(--logo-pink);
-    height: 300px;
-    width: 500px;
+    height: 400px;
+    width: 300px;
     padding: 70px;
+
 }
 
-.contact-form input {
-    width: 100px;
-    background-color: #2d2e83;
+.contact-input-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 5px 0px;
 }
+
+.contact-form input, .contact-form textarea{
+    background-color: transparent;
+    border: 1px solid black;
+    color: black;
+    width: 300px;
+    padding: 10px;
+}
+
+.contact-form input::placeholder {
+    color: black;
+}
+
+.box {
+    --mask:
+      radial-gradient(33.54px at 50% 45.00px,#000 99%,#0000 101%) calc(50% - 30px) 0/60px 51% repeat-x,
+      radial-gradient(33.54px at 50% -30px,#0000 99%,#000 101%) 50% 15px/60px calc(51% - 15px) repeat-x,
+      radial-gradient(33.54px at 50% calc(100% - 45.00px),#000 99%,#0000 101%) calc(50% - 30px) 100%/60px 51% repeat-x,
+      radial-gradient(33.54px at 50% calc(100% + 30.00px),#0000 99%,#000 101%) 50% calc(100% - 15px)/60px calc(51% - 15px) repeat-x;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+  }
