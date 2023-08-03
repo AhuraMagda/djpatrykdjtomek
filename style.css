@@ -172,6 +172,7 @@ header h1 {
     height: 100vh;
     overflow: hidden;
     width: 100vw;
+    position: relative;
 }
 
 .gallery-image {
@@ -180,6 +181,50 @@ header h1 {
     width: 100%;
     opacity: 0.5;
 }
+
+
+/* BIG IMAGE IN THE CENTER */
+
+  .big-image-container {
+    align-items: center;
+    background-color: #2d2e83;
+    bottom: 0;
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 400px;
+  }
+
+  .big-image {
+    height: 200px;
+    width: 200px;
+  }
+
+  .hide-bigimage-button {
+    height: 10px;
+    width: 10px;
+    background-color: red;
+    position: absolute;
+    top: 20px;
+    right: 20px
+  }
+
+  .arrow-left {
+    height: 20px;
+    width: 20px;
+    background-color: #e6007e;
+  }
+
+  .arrow-right {
+    height: 20px;
+    width: 20px;
+    background-color: #e6007e;
+  }
 
 /* section VIDEOS */
 
@@ -270,3 +315,5 @@ header h1 {
     -webkit-mask: var(--mask);
             mask: var(--mask);
   }
+
+
