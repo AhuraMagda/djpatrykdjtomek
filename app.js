@@ -6,15 +6,15 @@
 
 // HEADER text appearing
 
-const navLogo = document.querySelector(".logo");
+const navLogo = document.querySelector(".nav__logo");
 
-const introTextUp1 = document.querySelector(".intro-up-1");
-const introTextUp2 = document.querySelector(".intro-up-2");
-const introTextUp3 = document.querySelector(".intro-up-3");
+const introTextUp1 = document.querySelector(".intro-text__up1");
+const introTextUp2 = document.querySelector(".intro-text__up2");
+const introTextUp3 = document.querySelector(".intro-text__up3");
 
-const introTextDown1 = document.querySelector(".intro-down-1");
-const introTextDown2 = document.querySelector(".intro-down-2");
-const introTextDown3 = document.querySelector(".intro-down-3");
+const introTextDown1 = document.querySelector(".intro-text__down1");
+const introTextDown2 = document.querySelector(".intro-text__down2");
+const introTextDown3 = document.querySelector(".intro-text__down3");
 
 
 const moveIntroText = () => {
@@ -45,7 +45,7 @@ moveIntroText()
 
 // GALLERY IMAGES - change opacity
 
-const galleryImages = document.querySelectorAll(".gallery-image")
+const galleryImages = document.querySelectorAll(".gallery__img")
 console.log(galleryImages)
 
 const changeOpacity = (image) => {
@@ -55,21 +55,21 @@ const changeOpacity = (image) => {
 // GALLERY IMAGES - make img bigger and put it in the center
 
 const bigImageContainer = document.createElement('div')
-bigImageContainer.classList.add("big-image-container")
+bigImageContainer.classList.add("gallery__big-img__container")
 
 const bigImage = document.createElement('img')
-bigImage.classList.add("big-image")
+bigImage.classList.add("gallery__big-img")
 
 const hideBigImageButton = document.createElement('span')
-hideBigImageButton.classList.add("hide-bigimage-button")
+hideBigImageButton.classList.add("gallery__big-img__btn-hide")
 
 const arrowLeft = document.createElement('span')
-arrowLeft.classList.add("arrow-left")
+arrowLeft.classList.add("gallery__big-img__arrow-left")
 
 const arrowRight = document.createElement('span')
-arrowRight.classList.add("arrow-right")
+arrowRight.classList.add("gallery__big-img__arrow-right")
 
-const gallery = document.querySelector(".gallery-container")
+const gallery = document.querySelector(".gallery")
 
 
 
