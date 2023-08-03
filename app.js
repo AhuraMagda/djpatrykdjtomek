@@ -74,24 +74,33 @@ const gallery = document.querySelector(".gallery-container")
 
 
 const showBigImage = (image) => {
-    // sprawdź czy zdjęcie już jest? jak tak to REMOVE a jak nie to
     bigImage.src = image.src
+    bigImage.id = image.id
     gallery.appendChild(bigImageContainer)
     bigImageContainer.appendChild(arrowLeft)
     bigImageContainer.appendChild(bigImage)
     bigImageContainer.appendChild(arrowRight)
     bigImageContainer.appendChild(hideBigImageButton)
-    // albo jeśli jest tylko zmień bigImage.src = image.src, bardziej optymalnie?
 }
 
 const hideBigImage = () => {
     gallery.removeChild(bigImageContainer)
 }
 
-const changeImg = () => {
-    console.log(bigImage.src) 
-    // sprawdź który to index w naszym array of images
-    // ustaw, że teraz ma być zdjęcie o indexie + 1 albo tam pierwszym
+const changeImgRight = () => {
+    let newId;
+    let lastIndex = galleryImages.length-1
+    galleryImages.forEach((image, index) => image.id === bigImage.id && (newId = (index === lastIndex ? 0 : index+1)));
+    bigImage.src = galleryImages[newId].src
+    bigImage.id = galleryImages[newId].id
+}
+
+const changeImgLeft = () => {
+    let newId;
+    let lastIndex = galleryImages.length-1
+    galleryImages.forEach((image, index) => image.id === bigImage.id && (newId = (index === 0 ? lastIndex : index-1)));
+    bigImage.src = galleryImages[newId].src
+    bigImage.id = galleryImages[newId].id
 }
 
 galleryImages.forEach(image => {
@@ -101,6 +110,7 @@ galleryImages.forEach(image => {
     }
 )
 
-arrowRight.addEventListener("click", changeImg)
+arrowRight.addEventListener("click", changeImgRight)
+arrowLeft.addEventListener("click", changeImgLeft)
 
 hideBigImageButton.addEventListener("click", hideBigImage)
