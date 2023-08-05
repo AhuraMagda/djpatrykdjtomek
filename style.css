@@ -12,6 +12,8 @@
     --logo-orange: #f18318;
     --logo-pink: #e6007e;
     --background-blue: #151641;
+    --neon: rgb(116, 43, 91);
+    --neon2: rgb(189, 81, 31);
 }
 
 /* BODY */
@@ -93,13 +95,24 @@ header {
     display: none;
 }
 
-.intro__back-img {
+.intro__back-img-up {
+    animation: infinite-spinning 50s infinite linear;
+    width: 90vw;
+    max-width: 1200px;
+    left: -400px;
     opacity: .2;
-    height: 1000px;
     position: absolute;
     top: -300px;
-    left: -400px;
+}
+
+.intro__back-img-down {
     animation: infinite-spinning 50s infinite linear;
+    bottom: -400px;
+    width: 100vw;
+    max-width: 1600px;
+    opacity: .2;
+    position: absolute;
+    right: -600px;
 }
 
 @keyframes infinite-spinning {
@@ -123,8 +136,8 @@ header {
     height: 400px;
 }
 
-.about-us p {
-    width: 500px;
+.about-us-section p {
+    max-width: 500px;
 }
 
 .about-us__list li {
@@ -234,18 +247,20 @@ header {
     width: 200px;
 }
 
-/* cennik */
+/* CENNIK */
 .offer-section {
     flex-direction: column;
-    background: white;
+    background-color: black;
+    color: white
 }
 
 .offer {
     display: flex;
+
 }
 
 .offer__box {
-    background-color: var(--background-blue);
+    background-color: black;
     color: white;
     display: flex;
     flex-direction: column;
@@ -256,31 +271,42 @@ header {
     border-radius: 20px;
 }
 
+.neon-border {
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 1rem var(--neon),
+    0 0 0.6rem var(--neon),
+    0 0 1.6rem var(--neon),
+    inset 0 0 1.1rem var(--neon); 
+}
+
+.neon-border-two {
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 1rem var(--neon2),
+    0 0 0.6rem var(--neon2),
+    0 0 1.6rem var(--neon2),
+    inset 0 0 1.1rem var(--neon2); 
+}
+
 .offer__box h3 {
     padding: 25px 5px 15px 5px;
 }
 
-/* KONTAKT */
-.contact-section {
-    background-color: white;
-}
-
-.contact {
-    background-color: #f18318;
-    position: relative;
+.offer__form {
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
 
-.contact__form {
-
-    display: flex;
-    flex-direction: column;
-    padding: 70px;
-
+.offer__form table {
+    padding: 40px;
+    background-color: rgb(36, 36, 36);
+    margin-top: 20px;
 }
 
 
-.contact__form input, .contact__form textarea{
+.offer__form input, .contact__form textarea{
     background-color: transparent;
     border: 1px solid black;
     color: black;
@@ -288,6 +314,20 @@ header {
     padding: 10px;
 }
 
-.contact__form input::placeholder {
+.offer__form input::placeholder {
     color: black;
 }
+
+
+
+/* KONTAKT */
+.contact-section {
+    background-color: rgb(0, 0, 0);
+}
+
+.contact {
+    background-color: var(--text-white);
+    position: relative;
+    width: 100%;
+}
+
