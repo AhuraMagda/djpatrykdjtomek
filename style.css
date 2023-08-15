@@ -12,7 +12,7 @@
     --logo-orange: #f18318;
     --logo-pink: #e6007e;
     --background-blue: #151641;
-    --neon: rgb(116, 43, 91);
+    --neon: #e6007e;
     --neon2: rgb(189, 81, 31);
 }
 
@@ -127,13 +127,14 @@ header {
 /* ABOUT US - SECTION */
 
 .about-us-section {
-    background: linear-gradient(217deg, var(--logo-orange), rgba(255,0,0,0) 70.71%), 
-    linear-gradient(127deg, rgb(255 129 0 / 80%), rgba(0,255,0,0) 70.71%), 
-    linear-gradient(336deg, rgb(191 54 13 / 80%), rgba(0,0,255,0) 70.71%);
+    background-color: black;
+    color: var(--text-white);
 }
 
 .about-us__photo {
     height: 400px;
+    width: 400px;
+    border-radius: 50%;
 }
 
 .about-us-section p {
@@ -142,20 +143,20 @@ header {
 
 .about-us__list li {
     list-style: none;
-    padding: 40px 40px 40px 80px;
-    font-size: 35px;
-    color: black;
+    padding: 20px 20px 20px 50px;
     position: relative;
+    width: 500px;
 }
+
 
 .about-us__list li::before {
     content: "";
-    background-color: var(--background-blue);
+    background-image: url(./images/icon-pink.png);
+    background-size: cover;
     height: 50px;
     width: 50px;
-    border-radius: 50%;
     position: absolute;
-    left: 0;
+    left: -20px;
     top: 0;
     bottom: 0;
     margin: auto 0;
@@ -271,47 +272,55 @@ header {
     border-radius: 20px;
 }
 
-.neon-border {
-    box-shadow: 0 0 .2rem #fff,
-    0 0 .2rem #fff,
-    0 0 1rem var(--neon),
-    0 0 0.6rem var(--neon),
-    0 0 1.6rem var(--neon),
-    inset 0 0 1.1rem var(--neon); 
-}
 
-.neon-border-two {
-    box-shadow: 0 0 .2rem #fff,
-    0 0 .2rem #fff,
-    0 0 1rem var(--neon2),
-    0 0 0.6rem var(--neon2),
-    0 0 1.6rem var(--neon2),
-    inset 0 0 1.1rem var(--neon2); 
-}
 
 .offer__box h3 {
     padding: 25px 5px 15px 5px;
 }
 
 .offer__form {
+    align-items: center;
+    background-color: rgb(36, 36, 36);
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     width: 100%;
+}
+
+.offer__form ul {
+    margin-bottom: 30px;
+}
+
+.offer__form li {
+    list-style: none;
+    padding: 10px;
+}
+
+.offer__form img {
+    width: 50px;
+}
+
+.offer__form div {
+    margin-right: 40px;
 }
 
 .offer__form table {
     padding: 40px;
-    background-color: rgb(36, 36, 36);
-    margin-top: 20px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.offer__form label {
+    width: 100px;
 }
 
 
-.offer__form input, .contact__form textarea{
+.offer__form input, .offer__form textarea {
     background-color: transparent;
-    border: 1px solid black;
-    color: black;
+    border: 1px solid rgb(171, 171, 171);
+    color: rgb(215, 215, 215);
     width: 300px;
     padding: 10px;
+    margin: 10px;
 }
 
 .offer__form input::placeholder {
@@ -331,3 +340,24 @@ header {
     width: 100%;
 }
 
+
+
+
+
+.neon-border {
+    box-shadow: 0 0 .2rem #494949,
+    0 0 .2rem #5a5a5a,
+    0 0 1rem var(--neon),
+    0 0 0.6rem var(--neon),
+    0 0 1.6rem var(--neon),
+    inset 0 0 1.1rem var(--neon); 
+}
+
+.neon-border-two {
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem #fff,
+    0 0 1rem var(--neon2),
+    0 0 0.6rem var(--neon2),
+    0 0 1.6rem var(--neon2),
+    inset 0 0 1.1rem var(--neon2); 
+}

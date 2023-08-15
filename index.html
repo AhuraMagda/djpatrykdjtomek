@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,17 +41,16 @@
     <main>
         <section class="about-us-section">
             <div>
-                <img class="about-us__photo" src="./images/patryk.jpg" alt="">
+                <img class="about-us__photo neon-border-two" src="./images/patryk.jpg" alt="">
                 <h2>O nas</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.   </p>
+                <p>Jesteśmy dwójką sympatycznych i energicznych profesjonalistów. Od 7 lat zajmujemy się oprawą muzyczną i oświetleniową wszelakiego rodzaju imprez prywatnych i firmowych.</p>
+                <h3>Dlaczego warto nas wybrać?</h3>
             </div>
             <div>
                 <ul class="about-us__list">
-                    <li>oświetlenie</li>
-                    <li>coś tam</li>
-                    <li>dym</li>
-                    <li>arono</li>
-                    <li>muzyka</li>
+                    <li>W każdą organizowaną przez nas uroczystość wkładamy 100% wysiłków aby zarówno Państwo jak i zaproszei goście byli w pełni usatysfakcjonowani. Przed każdym wydarzeniem wspólnie z klientem dokładnie omówimy jego przebieg, aby ten wyjątkowy dla Państwa dzień stał się jeszcze piękniejszy.</li>
+                    <li>Jesteśmy otwarci na każdy gatunek muzyki. Uważnie obserwujemy gości i staramy się na bieżąco dostosowywać utwory tak aby każdy świetnie się bawił i znalazł coś dla siebie</li>
+                    <li>Używamy wysokiej jakości sprzętu aby zapewnić Państwu jak najlepszą zabawę oraz przyjemną dla ?? aranżacie oświetlenia </li>
                 </ul>
             </div>
         </section>
@@ -86,7 +85,7 @@
         </section>
         <section class="offer-section">
             <!-- <h2>OFERTA</h2> -->
-            <div class="offer">
+            <!-- <div class="offer">
                 <div class="offer__box neon-border">
                     <h3>Pakiet</h3>
                     <br>
@@ -100,22 +99,25 @@
                 <div class="offer__box neon-border">
                     <h3>Pakiet C</h3>
                 </div>
-            </div>
+            </div> -->
             <form class="offer__form" action="">
-                <table>
+                <div>
+                    <h2>Skontaktuj się z nami</h2>
+                    <ul>
+                        <li><img src="./images/phone-icon.png" alt=""> 873 373 238</li>
+                        <li><img src="./images/phone-icon.png" alt=""> kontakt@djpatrykdjtomek.pl</li>
+                        <li><img src="./images/phone-icon.png" alt=""> @djpatrykdjtomek/li>
+                    </ul>
+                    <h2>Lub wypełnij formularz kontaktowy</h2>
+                    <p>Skontaktujemy się w celu wyceny i ustalenia szczegółów</p>
+                </div>                
+                <table class="neon-border-two">
                     <tr>
-                        <!-- <th><h2>Zapytaj o ofertę i termin</h2></th> -->
-                    </tr>
-                    <tr>
-                        <td><label for="name">Imię:</label></td>
+                        <td><label for="name">Imię i nazwisko:</label></td>
                         <td><input type="text" id="name"></td>
                     </tr>
                     <tr>
-                        <td><label for="lastname">Nazwisko:</label></td>
-                        <td><input type="text" id="lastname"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="phone">Numer Telefonu:</label></td>
+                        <td><label for="phone">Telefon:</label></td>
                         <td><input type="number" id="phone"></td>
                     </tr>
                     <tr>
@@ -127,7 +129,15 @@
                         <td><input type="date" id="date"></td>
                     </tr>
                     <tr>
-                        <td><label for="comment">Opis:</label></td>
+                        <td><label for="time">Czas trwania:</label></td>
+                        <td><input type="text" id="time"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="guests">Liczba gości:</label></td>
+                        <td><input type="number" id="guests"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="comment">Uwagi:</label></td>
                         <td><textarea name="comment" id="comment" form=""></textarea></td>
                     </tr>
                 </table>
