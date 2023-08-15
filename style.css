@@ -12,7 +12,7 @@
     --logo-orange: #f18318;
     --logo-pink: #e6007e;
     --background-blue: #151641;
-    --neon: #e6007e;
+    --neon: #b5b5b5;
     --neon2: rgb(189, 81, 31);
 }
 
@@ -50,7 +50,7 @@ nav ul {
 
 nav ul li {
     color: rgb(206, 205, 205);
-    padding: 10px;
+    padding: 10px 30px;
     list-style: none;
 }
 
@@ -77,18 +77,14 @@ header {
 }
 
 .intro-text h1 {
-    color: var(--text-white);
-    font-size: 45px;
+    color: var(--logo-blue);
+    font-size: 65px;
     z-index: 1;
 }
 
-.intro-text p {
-    font-size: 25px;
-    color: var(--logo-pink);
-    z-index: 1;
-    position: absolute;
-    transition: top 1s;
-    top: 110px;
+.intro2 {
+    color: var(--text-white);
+    font-size: 40px;
 }
 
 .intro-text__up1, .intro-text__up2, .intro-text__up3, .intro-text__down1, .intro-text__down2, .intro-text__down3 {
@@ -146,6 +142,7 @@ header {
     padding: 20px 20px 20px 50px;
     position: relative;
     width: 500px;
+    margin-left: 40px;
 }
 
 
@@ -160,6 +157,19 @@ header {
     top: 0;
     bottom: 0;
     margin: auto 0;
+}
+
+.about-us {
+    width: 100%;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    padding: 30px;
+}
+
+.about-us__text {
+    display: flex;
+    align-self: center;
+    justify-content: center;
 }
 
 
@@ -349,8 +359,8 @@ header {
     0 0 .2rem #5a5a5a,
     0 0 1rem var(--neon),
     0 0 0.6rem var(--neon),
-    0 0 1.6rem var(--neon),
-    inset 0 0 1.1rem var(--neon); 
+    0 0 0.6rem var(--neon),
+    inset 0 0 0.3rem var(--neon); 
 }
 
 .neon-border-two {
@@ -361,3 +371,17 @@ header {
     0 0 1.6rem var(--neon2),
     inset 0 0 1.1rem var(--neon2); 
 }
+
+
+.neonText {
+    color: #fff;
+    text-shadow:
+    0 0 7px #fff, 0 0 10px #fff, 0 0 11px #fff, 0 0 2px rgb(255, 255, 255), 0 0 2px rgb(255, 255, 255), 0 0 2px rgb(255, 255, 255), 0 0 2px rgb(255, 255, 255), 0 0 0px rgb(255, 255, 255)
+  }
+
+.neon-text-pink {
+    text-shadow:
+    0 0 7px #e6007e, 0 0 2px #e6007e, 0 0 2px #e6007e, 0 0 2px #e6007e, 0 0 2px #e6007e, 0 0 2px #e6007e, 0 0 2px #e6007e, 0 0 0px #e6007e;
+}
+
+

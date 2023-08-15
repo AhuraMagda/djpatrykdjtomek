@@ -18,10 +18,10 @@
     <nav>
         <img class="nav__logo" src="./images/logo_color_offwhite.svg" alt="">
         <ul>
-            <li>STRONA GŁÓWNA</li>
+            <li>O NAS</li>
             <li>GALERIA</li>
+            <li>VIDEO</li>
             <li>KONTAKT</li>
-            <li>CENNIK</li>
         </ul>
     </nav>
     <header>
@@ -29,7 +29,8 @@
             <p class="intro-text__up3" >Gale</p>
             <p class="intro-text__up2"> Imprezy Firmowe</p>
             <p class="intro-text__up1">Wydarzenia okolicznościowe</p>
-            <h1>PROFESJONALNA OBSŁUGA DJ</h1>
+            <h1 class="neonText">PROFESJONALNA OBSŁUGA DJ</h1>
+            <h2 class="intro2">IMPREZY OKOLICZNOŚCIOWE</h2>
             <p class="intro-text__down1">Zabawyyyyyyy sylwesterowe</p> 
             <p class="intro-text__down2">Przyjęcia urodzinowe</p>
             <p class="intro-text__down3">Wesela</p>
@@ -40,19 +41,22 @@
 
     <main>
         <section class="about-us-section">
-            <div>
-                <img class="about-us__photo neon-border-two" src="./images/patryk.jpg" alt="">
-                <h2>O nas</h2>
-                <p>Jesteśmy dwójką sympatycznych i energicznych profesjonalistów. Od 7 lat zajmujemy się oprawą muzyczną i oświetleniową wszelakiego rodzaju imprez prywatnych i firmowych.</p>
-                <h3>Dlaczego warto nas wybrać?</h3>
+            <div class="about-us">
+
+                <img class="about-us__photo" src="./images/patryk.jpg" alt="">
+
+                <div class="about-us__text">
+                    
+                    <ul class="about-us__list">
+                        <h3>Dlaczego warto nas wybrać?</h3>
+                        <li>W każdą organizowaną przez nas uroczystość wkładamy 100% wysiłków aby zarówno Państwo jak i zaproszei goście byli w pełni usatysfakcjonowani. Przed każdym wydarzeniem wspólnie z klientem dokładnie omówimy jego przebieg, aby ten wyjątkowy dla Państwa dzień stał się jeszcze piękniejszy.</li>
+                        <li>Jesteśmy otwarci na każdy gatunek muzyki. Uważnie obserwujemy gości i staramy się na bieżąco dostosowywać utwory tak aby każdy świetnie się bawił i znalazł coś dla siebie</li>
+                        <li>Używamy wysokiej jakości sprzętu aby zapewnić Państwu jak najlepszą zabawę oraz przyjemną dla ?? aranżacie oświetlenia </li>
+                    </ul>
+                </div>
+                <!-- <img class="about-us__photo" src="./images/Tomek.jpg" alt=""> -->
             </div>
-            <div>
-                <ul class="about-us__list">
-                    <li>W każdą organizowaną przez nas uroczystość wkładamy 100% wysiłków aby zarówno Państwo jak i zaproszei goście byli w pełni usatysfakcjonowani. Przed każdym wydarzeniem wspólnie z klientem dokładnie omówimy jego przebieg, aby ten wyjątkowy dla Państwa dzień stał się jeszcze piękniejszy.</li>
-                    <li>Jesteśmy otwarci na każdy gatunek muzyki. Uważnie obserwujemy gości i staramy się na bieżąco dostosowywać utwory tak aby każdy świetnie się bawił i znalazł coś dla siebie</li>
-                    <li>Używamy wysokiej jakości sprzętu aby zapewnić Państwu jak najlepszą zabawę oraz przyjemną dla ?? aranżacie oświetlenia </li>
-                </ul>
-            </div>
+            
         </section>
         <section class="gallery-section">
             <div class="gallery">
@@ -125,7 +129,7 @@
                         <td><input type="text" id="email"></td>
                     </tr>
                     <tr>
-                        <td><label for="date">Data:</label></td>
+                        <td><label for="date">Data Imprezy:</label></td>
                         <td><input type="date" id="date"></td>
                     </tr>
                     <tr>
@@ -133,7 +137,7 @@
                         <td><input type="text" id="time"></td>
                     </tr>
                     <tr>
-                        <td><label for="guests">Liczba gości:</label></td>
+                        <td><label for="guests">Szacowana liczba gości:</label></td>
                         <td><input type="number" id="guests"></td>
                     </tr>
                     <tr>
@@ -143,11 +147,6 @@
                 </table>
             </form>
 
-        </section>
-        <section class="contact-section">       
-            <div class="contact">
-
-            </div>
         </section>
     </main>
     <footer>
