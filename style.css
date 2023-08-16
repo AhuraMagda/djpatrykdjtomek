@@ -258,37 +258,14 @@ header {
     width: 200px;
 }
 
-/* CENNIK */
-.offer-section {
+/* CONTACT */
+.contact-section {
     flex-direction: column;
     background-color: black;
     color: white
 }
 
-.offer {
-    display: flex;
-
-}
-
-.offer__box {
-    background-color: black;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 200px;
-    margin: 20px;
-    width: 200px;
-    border-radius: 20px;
-}
-
-
-
-.offer__box h3 {
-    padding: 25px 5px 15px 5px;
-}
-
-.offer__form {
+.contact {
     align-items: center;
     background-color: rgb(36, 36, 36);
     display: flex;
@@ -296,35 +273,37 @@ header {
     width: 100%;
 }
 
-.offer__form ul {
+.contact__media {
+    padding-right: 40px;
+}
+
+.contact__media ul {
     margin-bottom: 30px;
 }
 
-.offer__form li {
+.contact__media li {
     list-style: none;
-    padding: 10px;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
 }
 
-.offer__form img {
+.contact__media img {
     width: 50px;
+    margin-right: 10px;
 }
 
-.offer__form div {
-    margin-right: 40px;
-}
-
-.offer__form table {
+.contact__form table {
     padding: 40px;
     width: fit-content;
     height: fit-content;
 }
 
-.offer__form label {
+.contact__form label {
     width: 100px;
 }
 
-
-.offer__form input, .offer__form textarea {
+.contact__form input, .contact__form textarea {
     background-color: transparent;
     border: 1px solid rgb(171, 171, 171);
     color: rgb(215, 215, 215);
@@ -333,25 +312,12 @@ header {
     margin: 10px;
 }
 
-.offer__form input::placeholder {
+.contact__form input::placeholder {
     color: black;
 }
 
 
-
-/* KONTAKT */
-.contact-section {
-    background-color: rgb(0, 0, 0);
-}
-
-.contact {
-    background-color: var(--text-white);
-    position: relative;
-    width: 100%;
-}
-
-
-
+/* EFFECTS */
 
 
 .neon-border {
