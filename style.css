@@ -54,6 +54,11 @@ nav ul li {
     list-style: none;
 }
 
+nav ul li a {
+    color: var(--text-white);
+    text-decoration: none;
+}
+
 /* HEADER */
 
 header {
