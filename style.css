@@ -22,7 +22,18 @@ section {
     align-items: center;
     display: flex;
     justify-content: center;
+}
+
+.scroll-snap {
     height: 100vh;
+}
+
+.scroll-snap2 {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 /* NAVIGATION */
@@ -79,17 +90,22 @@ header {
     justify-content: center;
     padding: 100px;
     position: relative;
+    z-index: 1;
 }
 
 .intro-text h1 {
     color: var(--logo-blue);
-    font-size: 65px;
-    z-index: 1;
+    font-size: clamp(25px, 8vw, 65px);
+
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.intro2 {
+.intro-text h2 {
     color: var(--text-white);
-    font-size: 40px;
+    font-size: clamp(20px, 6vw, 55px);
+    text-align: center;
+    margin-top: 10px;
 }
 
 .intro-text__up1, .intro-text__up2, .intro-text__up3, .intro-text__down1, .intro-text__down2, .intro-text__down3 {
@@ -133,26 +149,32 @@ header {
 }
 
 .about-us {
-    display: flex;
+    width: 100%;
     justify-content: center;
+    align-items: center;
+    background-color: rgb(36, 36, 36);
+    display: flex;
+    padding: 100px 60px;
 }
 
 .about-us__photo {
-    height: 400px;
-    width: 400px;
+    width: 50vw;
+    max-height: 400px;
+    max-width: 400px;
     border-radius: 50%;
+    margin: 20px 0;
 }
 
-.about-us-section p {
-    max-width: 500px;
+.about-us__text {
+    padding: 0 20px;
 }
 
 .about-us__list li {
     list-style: none;
     padding: 20px 20px 20px 50px;
     position: relative;
-    width: 500px;
-    margin-left: 40px;
+    margin-left: 20px;
+    max-width: 500px;
 }
 
 
@@ -181,12 +203,7 @@ header {
 }
 
 
-.about-us {
-    width: 100%;
-    background-color: rgb(36, 36, 36);
-    display: flex;
-    padding: 30px;
-}
+
 
 .about-us__text {
     display: flex;
@@ -228,43 +245,50 @@ header {
 
 .gallery__big-img__container {
     align-items: center;
-    background-color: #2d2e83;
+    background-color: #000000;
     bottom: 0;
     display: flex;
-    height: 300px;
+    height: 90%;
     justify-content: center;
     left: 0;
     margin: auto;
     position: absolute;
     right: 0;
     top: 0;
-    width: 400px;
+    width: 80%;
+    padding: 20px;
 }
 
 .gallery__big-img {
-    height: 200px;
-    width: 200px;
+    width: 70%;
+    height: 70%;
 }
 
 .gallery__big-img__btn-hide {
-    height: 10px;
-    width: 10px;
-    background-color: red;
+    height: 30px;
+    width: 30px;
+    background-image: url(./images/icon-close.png);
+    background-size: cover;
     position: absolute;
     top: 20px;
     right: 20px
 }
 
 .gallery__big-img__arrow-left {
-    height: 20px;
-    width: 20px;
-    background-color: #e6007e;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    background-image: url(./images/icon-arrow-left.png);
+    background-size: cover;
+
 }
 
 .gallery__big-img__arrow-right {
-    height: 20px;
-    width: 20px;
-    background-color: #e6007e;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    background-image: url(./images/icon-arrow-right.png);
+    background-size: cover;
 }
 
 /* section VIDEOS */
@@ -295,8 +319,13 @@ header {
     width: 100%;
 }
 
+.contact a {
+    text-decoration: none;
+    color: var(--text-white);
+}
+
 .contact__media {
-    padding-right: 40px;
+    padding: 40px;
 }
 
 .contact__media ul {
@@ -329,7 +358,8 @@ header {
     background-color: transparent;
     border: 1px solid rgb(171, 171, 171);
     color: rgb(215, 215, 215);
-    width: 300px;
+    width: 40vw;
+    max-width: 300px;
     padding: 10px;
     margin: 10px;
 }
@@ -373,3 +403,66 @@ header {
 }
 
 
+
+@media screen and (max-width: 1000px) {
+    .about-us {
+        flex-direction: column;
+        padding: 0;
+    }
+    .contact {
+        flex-direction: column;
+        width: fit-content;
+        height: 100%;
+    }
+    nav ul {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+.scroller {
+    height: 3.2em;
+    line-height: 1.4em;
+    position: relative;
+    overflow: hidden;
+    width: 16em;
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid white;
+    border-top: 2px solid white;
+  }
+  .scroller > span {
+    position: absolute;
+    top: 0px;
+    animation: slide 5s infinite;
+    font-weight: bold;
+    
+  }
+
+@keyframes slide {
+    0% {
+        top: 0;
+    }
+    25% {
+        top: -3.4em;
+    }
+    50% {
+        top: -6.8em;
+    }
+    75%, 100% {
+        top: -10.2em;
+    }
+
+  }
+
+@media screen and (max-width: 570px) {
+    .contact__form {
+        margin: 0 10px;
+    }
+}
