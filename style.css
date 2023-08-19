@@ -116,20 +116,22 @@ header {
     animation: infinite-spinning 50s infinite linear;
     width: 90vw;
     max-width: 1200px;
-    left: -400px;
+    min-width: 400px;
+    left: -40%;
     opacity: .2;
     position: absolute;
-    top: -300px;
+    top: -30%;
 }
 
 .intro__back-img-down {
     animation: infinite-spinning 50s infinite linear;
-    bottom: -400px;
+    bottom: -40%;
     width: 100vw;
     max-width: 1600px;
+    min-width: 500px;
     opacity: .2;
     position: absolute;
-    right: -600px;
+    right: -50%;
 }
 
 @keyframes infinite-spinning {
@@ -257,6 +259,7 @@ header {
     top: 0;
     width: 80%;
     padding: 20px;
+    z-index: 2;
 }
 
 .gallery__big-img {
@@ -464,5 +467,11 @@ header {
 @media screen and (max-width: 570px) {
     .contact__form {
         margin: 0 10px;
+    }
+    .intro__back-img-up {
+        top: -15%;
+    }
+    .intro__back-img-down {
+        bottom: -20%;
     }
 }
