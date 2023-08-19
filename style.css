@@ -36,6 +36,8 @@ nav {
     position: fixed;
     width: 100%;
     z-index: 2;
+    top: 21px;
+    justify-content: space-between;
 }
 
 .nav__logo {
@@ -44,9 +46,16 @@ nav {
 
 nav ul {
     align-items: center;
+    background-color: var(--background-blue);
     display: flex;
+    flex-direction: column;
+    height: 60vh;
     justify-content: center;
-    padding-left: 100px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 15vh;
+    transform: translate(100%);
 }
 
 nav ul li {
@@ -59,6 +68,58 @@ nav ul li a {
     color: var(--text-white);
     text-decoration: none;
 }
+
+
+/* NAVIGATION Hamburger */
+
+#toggle {
+    display: none;
+  }
+
+.hamburger {
+    height: 48px;
+    margin-left: -32px;
+    margin-top: -56px;
+    position: absolute;
+    right: 10%;
+    top: 90px;
+    width: fit-content;
+    z-index: 5;
+  }
+  
+.hamburger div {
+    background-color: var(--logo-pink);
+    border-radius: 3.2px;
+    height: 3.2px;
+    margin-top: 11.2px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    width: 48px;
+}
+
+.hamburger--top-bun_clicked {
+    transform: rotate(-45deg) translateX(-6.4px) translateY(15px);
+    margin-top: 16px;
+}
+
+.hamburger--meat_clicked {
+    transform: rotate(45deg) translate(5px) translateY(-3.2px);
+    margin-top: -7.2px;
+}
+
+.hamburger--bottom-bun_clicked {
+    opacity: 0;
+    transform: rotate(45deg);
+}
+
+/* NAV active */
+
+.nav-active {
+    transform: translate(0%);
+    width: 100%;
+}
+
+
 
 /* HEADER */
 
@@ -365,7 +426,6 @@ header {
 }
 
 .contact__form-wrapper {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -460,4 +520,35 @@ header {
         flex-direction: row;
     }
     
+}
+
+
+
+
+@media screen and (min-width: 1000px) {
+    .scroll-snap2 {
+        height: fit-content;
+    }
+    .contact-section {
+        height: 100vh;
+    }
+    .contact {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .intro__back-img-up {
+
+        left: -15%;
+
+    }
+    
+    .intro__back-img-down {
+
+        right: -30%;
+    }
 }

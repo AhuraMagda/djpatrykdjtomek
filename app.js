@@ -79,25 +79,31 @@ hideBigImageButton.addEventListener("click", hideBigImage)
 
 
 
-// media change contact
 
-const contactSection = document.querySelector(".contact-section")
-const contactMedia = document.querySelector(".contact media")
-const contactForm = document.querySelector(".contact__form-wrapper")
 
-function changeContact(x) {
-    if (x.matches) { // If media query matches
-      contactSection.classList.remove("scroll-snap")
-      contactMedia.classList.add("scroll-snap")
-      contactForm.classList.add("scroll-snap")
-      console.log("works")
-    } else {
-        // contactSection.classList.add("scroll-snap")
-        // contactMedia.classList.remove("scroll-snap")
-        // contactForm.classList.remove("scroll-snap")
-    }
-  }
-  
-  let x = window.matchMedia("(max-width: 1000px)")
- changeContact(x) // Call listener function at run time
-  x.addEventListener("stage", ()=> {changeContact(x)}) // Attach listener function on state changes
+// HAMBURGER
+const navLinks = document.querySelectorAll("nav ul a")
+const burgerIcon = document.querySelector(".hamburger")
+const mobileNav = document.querySelector("nav ul");
+const hamburgerTopBun = document.querySelector(".top-bun")
+const hamburgerBottomBun = document.querySelector(".bottom-bun")
+const hamburgerMeat = document.querySelector(".meat")
+
+const changeBurgerToX = () => {
+    hamburgerTopBun.classList.toggle("hamburger--top-bun_clicked")
+    hamburgerBottomBun.classList.toggle("hamburger--bottom-bun_clicked")
+    hamburgerMeat.classList.toggle("hamburger--meat_clicked")
+}
+
+burgerIcon.addEventListener('click', function() {
+    mobileNav.classList.toggle('nav-active'); 
+    changeBurgerToX();
+})
+
+
+// nav hidding after click
+
+navLinks.forEach(link=>{link.addEventListener("click", () => {
+    mobileNav.classList.remove('nav-active');
+    changeBurgerToX();
+})})
