@@ -116,7 +116,7 @@ header {
     animation: infinite-spinning 50s infinite linear;
     width: 90vw;
     max-width: 1200px;
-    min-width: 400px;
+    min-width: 500px;
     left: -40%;
     opacity: .2;
     position: absolute;
@@ -128,7 +128,7 @@ header {
     bottom: -40%;
     width: 100vw;
     max-width: 1600px;
-    min-width: 500px;
+    min-width: 600px;
     opacity: .2;
     position: absolute;
     right: -50%;
