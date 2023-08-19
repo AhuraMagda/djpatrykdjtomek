@@ -464,7 +464,7 @@ header {
 
   }
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 570px) and (orientation: portrait) {
     .contact__form {
         margin: 0 10px;
     }
