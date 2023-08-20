@@ -24,26 +24,15 @@
             <li><a href="#video">VIDEO</a></li>
             <li><a href="#kontakt">KONTAKT</a></li>
         </ul>
-
-
-
-
         <div class="hamburger">
             <div class="top-bun"></div>
             <div class="meat"></div>
             <div class="bottom-bun"></div>
         </div>
-
-
-
-        
     </nav>
-
     <header class="scroll-snap">
         <div class="intro-text">
             <h1>PROFESJONALNA OBSŁUGA&nbsp;DJ</h1>
-
-
             <div class="scroller">
                 <span>
                   <h2 class="scroll-text">Wesela</h2><br/>
@@ -52,10 +41,6 @@
                   <h2 class="scroll-text">Wesela</h2>
                 </span>
               </div>
-
-
-
-
         </div>
         <img class="intro__back-img-up" src="./images/niemafal2.png" alt="">
         <img class="intro__back-img-down" src="./images/niemafal2.png" alt="">
@@ -118,14 +103,53 @@
                 <div class="contact__media scroll-snap2">
                     <h2>Skontaktuj się z nami</h2>
                     <ul>
-                        <li><a href="tel:123123123"><img src="./images/icon-phone.png" alt=""></a> <a href="tel:123123123">123 123 123</a></li>
+                        <li><a href="tel:123123123"><img src="./images/icon-phone.png" alt=""></a> <a href="tel:123123123">+48 123 123 123</a></li>
                         <li><a href="mailto:kontakt@djpatrykdjtomek.pl"><img src="./images/icon-email.png" alt=""></a> <a href="mailto:kontakt@djpatrykdjtomek.pl">kontakt@djpatrykdjtomek.pl</a></li>
                         <li><a href="https://www.facebook.com/profile.php?id=100057328102621"><img src="./images/icon-facebook.png" alt=""></a> <a href="https://www.facebook.com/profile.php?id=100057328102621">@djpatrykdjtomek</a></li>
                     </ul>
                 </div>     
                 <div class="contact__form-wrapper">
-                    <form class="contact__form scroll-snap2" action="send-email.php" method="POST">
-                        <table class="neon-border-two">
+                    <form class="contact__form scroll-snap2 neon-border-two" action="send-email.php" method="POST">
+
+                        <h2>Lub wypełnij formularz</h2>
+                        <p>a my skontatujemy się z wyceną</p>
+                        
+                        <label for="name">Imię i nazwisko:</label>
+                        <input type="text" id="contact__form__name">
+                        
+                    
+                        <label for="phone">Telefon:</label>
+                        <input type="number" id="contact__form__phone">
+                        
+                    
+                        <label for="email">Email:</label>
+                        <input type="text" id="contact__form__email">
+                        
+
+                        <label for="date">Data Imprezy:</label>
+                        <input type="date" id="contact__form__date">
+                        
+                    
+                        <label for="time">Czas trwania:</label>
+                        <input type="text" id="contact__form__time">
+                        
+                    
+                        <label for="guests">Szacowana liczba gości:</label>
+                        <input type="number" id="contact__form__guests">
+                        
+                    
+                        <label for="comment">Uwagi:</label>
+                        <textarea name="comment" id="contact__form__comment" form=""></textarea>
+                            
+                        
+                        <button class="button-form">wyślij</button>
+
+
+
+
+
+
+                        <!-- <table class="neon-border-two">
                             <thead>
                                 <tr>
                                     <th colspan="2">
@@ -167,7 +191,7 @@
                                     <td colspan="2" class="button-row"><button class="button-form">wyślij</button></td>
                                 </tr>
                             </tbody>
-                        </table>
+                        </table> -->
                     </form>
                 </div>
 
