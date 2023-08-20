@@ -107,3 +107,9 @@ navLinks.forEach(link=>{link.addEventListener("click", () => {
     mobileNav.classList.remove('nav-active');
     changeBurgerToX();
 })})
+
+
+
+// add copyright
+
+document.querySelector("#footer__date").innerText = `Copyright © ${new Date().getFullYear()} Migas`;

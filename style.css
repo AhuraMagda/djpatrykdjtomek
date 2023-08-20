@@ -241,7 +241,7 @@ header {
 
 .about-us__list li {
     list-style: none;
-    padding: 20px 20px 20px 50px;
+    padding: 25px 20px 25px 50px;
     position: relative;
     margin-left: 20px;
     max-width: 500px;
@@ -259,6 +259,15 @@ header {
     bottom: 0;
     margin: auto 0;
 }
+
+#about-us__list-01::before {
+    background-image: url(./images/icon-location.png);
+}
+
+#about-us__list-02::before {
+    background-image: url(./images/icon-party.png);
+}
+
 
 #about-us__list-1::before {
     background-image: url(./images/icon-pink.png);
@@ -598,4 +607,18 @@ header {
 footer {
     background-color: #000000;
     color: var(--text-white);
+    display: flex;
+}
+
+footer p {
+    font-size: .8rem;
+    padding: 10px 5px;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: var(--logo-orange);
 }
