@@ -565,6 +565,14 @@ header {
     .gallery {
         grid-template-columns: repeat(5, 1fr);
     }
+    .contact__form-wrapper {
+        width: 60vw;
+        min-width: 400px;
+        max-width: 600px;
+    }
+    .contact-section {
+        display: flex;
+    }
 }
 
 
@@ -605,15 +613,16 @@ footer {
     background-color: #000000;
     color: var(--text-white);
     display: flex;
+    justify-content: center;
 }
 
 footer p {
     font-size: .8rem;
-    padding: 10px 5px;
+    padding: 25px 5px 20px 5px;
 }
 
 footer a {
-    color: white;
+    color: var(--text-white);
 }
 
 footer a:hover {
