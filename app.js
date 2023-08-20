@@ -12,6 +12,8 @@ console.log(galleryImages)
 
 const changeOpacity = (image) => {
     image.style.opacity = image.style.opacity === "1" ? ".5" : "1";
+    // image.style.(-webkit-filter) = "grayscale(100%)";
+    image.style.filter = image.style.filter === "grayscale(100%)" ? "grayscale(100%)" : "grayscale(0%)";
 }
 
 // GALLERY IMAGES - make img bigger and put it in the center
