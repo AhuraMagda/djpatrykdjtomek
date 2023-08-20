@@ -12,8 +12,9 @@
     --logo-orange: #f18318;
     --logo-pink: #e6007e;
     --background-blue: #151641;
-    --neon: #b5b5b5;
-    --neon2: rgb(189, 81, 31);
+    --neon: #ff9900;
+    /* --neon2: rgb(189, 81, 31); */
+    --neon2: #f18318;
 }
 
 /* BODY */
@@ -209,13 +210,13 @@ header {
 /* ABOUT US - SECTION */
 
 .about-us-section {
-    background-color: black;
+    background-color: rgb(36, 36, 36);
     color: var(--text-white);
 }
 
 .about-us {
     width: 100%;
-    background-color: rgb(36, 36, 36);
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -284,7 +285,8 @@ header {
 /* GALLERY - SECTION */
 
 .gallery-section {
-    overflow: hidden;
+    /* overflow: hidden; */
+
 }
 
 .gallery {
@@ -296,17 +298,10 @@ header {
     position: relative;
 }
 
-@media screen and (max-width: 1000px) {
-    .gallery-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 .gallery__img {
     height: 100%;
     object-fit: cover;
     width: 100%;
-    opacity: 1;
 }
 
 
@@ -317,21 +312,19 @@ header {
     background-color: #000000;
     bottom: 0;
     display: flex;
-    height: 90%;
+    height: fit-content;
     justify-content: center;
     left: 0;
     margin: auto;
     position: absolute;
     right: 0;
     top: 0;
-    width: 80%;
-    padding: 20px;
+    width: 90%;
     z-index: 2;
 }
 
 .gallery__big-img {
-    width: 70%;
-    height: 70%;
+    width: 100%;
 }
 
 .gallery__big-img__btn-hide {
@@ -345,16 +338,20 @@ header {
 }
 
 .gallery__big-img__arrow-left {
+    position: absolute;
+    left: 0;
     height: 40px;
     width: 40px;
-    margin-right: 10px;
+    margin: 10px;
     background-image: url(./images/icon-arrow-left.png);
     background-size: cover;
 
 }
 
 .gallery__big-img__arrow-right {
+    position: absolute;
     height: 40px;
+    right: 0;
     width: 40px;
     margin: 10px;
     background-image: url(./images/icon-arrow-right.png);
@@ -369,7 +366,7 @@ header {
     linear-gradient(336deg, rgb(191 54 13 / 80%), rgba(0,0,255,0) 70.71%); */
     background-color: var(--background-blue);
     color: var(--text-white);
-    flex-wrap: wrap;
+    flex-direction: column;
     padding: 100px 10px;
 }
 
@@ -442,8 +439,27 @@ header {
     width: 100%;
 }
 
-.contact__form p {
-    margin-bottom: 20px;
+
+.contact__form__button {
+    background-color: var(--logo-orange);
+    padding: 10px 20px;
+    border-style: none;
+    color: white;
+    border: 1px solid white;
+    box-shadow: #000000;
+    transition: .5s;
+}
+
+.contact__form__button:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    box-shadow: 0 0 .2rem #fff,
+    0 0 .2rem var(--neon2),
+    0 0 .5rem var(--neon2),
+    0 0 0.6rem var(--neon2),
+    0 0 .8rem var(--neon2),
+    inset 0 0 1.1rem var(--neon2); 
 }
 
 /* .contact__form table {
@@ -495,15 +511,16 @@ header {
 
 
 .neonText {
-    color: #fff;
+    color: var(--neon);
     text-shadow:
-    0 0 7px #fff, 0 0 10px #fff, 0 0 11px #fff, 0 0 2px rgb(255, 255, 255), 0 0 2px rgb(255, 255, 255), 0 0 2px rgb(255, 255, 255), 0 0 2px rgb(255, 255, 255), 0 0 0px rgb(255, 255, 255)
+    0 0 7px var(--neon), 0 0 10px var(--neon), 0 0 11px var(--neon), 0 0 2px var(--neon), 0 0 2px var(--neon), 0 0 2px var(--neon), 0 0 2px var(--neon), 0 0 0px var(--neon)
   }
+/* 
 
 .neon-text-pink {
     text-shadow:
     0 0 7px #e6007e, 0 0 2px #e6007e, 0 0 2px #e6007e, 0 0 2px #e6007e, 0 0 2px #e6007e, 0 0 2px #e6007e, 0 0 2px #e6007e, 0 0 0px #e6007e;
-}
+} */
 
 
 
@@ -539,13 +556,13 @@ header {
     .contact__form-wrapper {
         padding: 0;
     }
+    .gallery {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
 
 
 @media screen and (min-width: 1000px) {
-    .scroll-snap2 {
-        height: fit-content;
-    }
     .contact-section {
         height: 100vh;
         display: flex;
@@ -568,20 +585,12 @@ header {
     }
 }
 
-
-
-
-/* xxx */
-
-.button-form {
-    background-color: white;
-    padding: 10px 15px;
+@media (pointer: fine) {
+    .gallery__img {
+        opacity: 0.6;
+    }
+    
 }
-
-.button-row {
-    text-align: center;
-}
-
 
 
 /* footer */
