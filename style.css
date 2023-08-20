@@ -389,6 +389,7 @@ header {
 /* CONTACT */
 .contact-section {
     background-color: black;
+    padding-top: 100px;
     color: white;
     display: block;
 }
@@ -402,7 +403,7 @@ header {
 }
 
 .contact__media {
-    padding: 60px 40px;
+    padding: 40px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -432,7 +433,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .contact__form {
