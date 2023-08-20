@@ -56,17 +56,18 @@ nav ul {
     text-align: center;
     top: 15vh;
     transform: translate(100%);
+    border: 2px solid black;
 }
 
 nav ul li {
     color: rgb(206, 205, 205);
-    padding: 10px 30px;
     list-style: none;
+    padding: 25px 30px;
 }
 
 nav ul li a {
     color: var(--text-white);
-    text-decoration: none;
+    padding: 25px 30px;
 }
 
 
@@ -293,10 +294,6 @@ header {
 
 /* GALLERY - SECTION */
 
-.gallery-section {
-    /* overflow: hidden; */
-
-}
 
 .gallery {
     display: grid;
