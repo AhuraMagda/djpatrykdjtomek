@@ -32,16 +32,15 @@ nav {
     background-color: hsl(0deg 0% 0% / 30%);
     display: flex;
     font-size: 1.5rem;
-    padding: 20px;
+    padding: 15px;
     position: fixed;
     width: 100%;
     z-index: 2;
-    top: 21px;
     justify-content: space-between;
 }
 
 .nav__logo {
-    height: 80px;
+    height: 70px;
 }
 
 nav ul {
@@ -77,24 +76,23 @@ nav ul li a {
   }
 
 .hamburger {
-    height: 48px;
-    margin-left: -32px;
-    margin-top: -56px;
+    margin: 5px 10px;
+    height: 50px;
+    width: 50px;
     position: absolute;
-    right: 10%;
-    top: 90px;
-    width: fit-content;
+    right: 5%;
+    top: 20px;
     z-index: 5;
   }
   
 .hamburger div {
     background-color: var(--logo-pink);
     border-radius: 3.2px;
-    height: 3.2px;
-    margin-top: 11.2px;
+    height: 2px;
+    margin-top: 12px;
     position: relative;
     transition: all 0.3s ease-in-out;
-    width: 48px;
+    width: 40px;
 }
 
 .hamburger--top-bun_clicked {
@@ -145,9 +143,8 @@ header {
 }
 
 .intro-text h1 {
-    color: var(--logo-blue);
+    color: white;
     font-size: clamp(35px, 8vw, 65px);
-
     text-align: center;
     margin-bottom: 10px;
 }
@@ -292,7 +289,7 @@ header {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     height: 100vh;
     overflow: hidden;
     width: 100vw;
@@ -309,7 +306,7 @@ header {
     height: 100%;
     object-fit: cover;
     width: 100%;
-    opacity: 0.5;
+    opacity: 1;
 }
 
 
@@ -367,11 +364,13 @@ header {
 /* section VIDEOS */
 
 .videos-section {
-    background: linear-gradient(217deg, var(--logo-orange), rgba(255,0,0,0) 70.71%), 
+    /* background: linear-gradient(217deg, var(--logo-orange), rgba(255,0,0,0) 70.71%), 
     linear-gradient(127deg, rgb(255 129 0 / 80%), rgba(0,255,0,0) 70.71%), 
-    linear-gradient(336deg, rgb(191 54 13 / 80%), rgba(0,0,255,0) 70.71%);
+    linear-gradient(336deg, rgb(191 54 13 / 80%), rgba(0,0,255,0) 70.71%); */
+    background-color: var(--background-blue);
+    color: var(--text-white);
     flex-wrap: wrap;
-    padding: 50px 10px;
+    padding: 100px 10px;
 }
 
 .videos-section h2 {
@@ -388,7 +387,6 @@ header {
 .contact-section {
     background-color: black;
     color: white;
-    height: fit-content;
 }
 
 .contact {
@@ -396,8 +394,7 @@ header {
 }
 
 .contact a {
-    text-decoration: none;
-    color: var(--text-white);
+    color: white;
 }
 
 .contact__media {
@@ -407,6 +404,9 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+.contact__media h2 {
+    padding-bottom: 10px;
 }
 
 .contact__media ul {
@@ -543,13 +543,34 @@ header {
 
 @media screen and (min-width: 1800px) {
     .intro__back-img-up {
-
         left: -15%;
-
     }
     
     .intro__back-img-down {
-
         right: -30%;
     }
+}
+
+@media screen and (min-width: 700px) {
+    .contact__form-wrapper {
+        margin: 0;
+    }
+}
+
+
+
+.span-2 {
+ 
+}
+
+
+/* xxx */
+
+.button-form {
+    background-color: white;
+    padding: 10px 15px;
+}
+
+.button-row {
+    text-align: center;
 }
