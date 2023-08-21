@@ -10,10 +10,9 @@
 const galleryImages = document.querySelectorAll(".gallery__img")
 console.log(galleryImages)
 
-const changeOpacity = (image) => {
-    image.style.opacity = image.style.opacity === "1" ? ".5" : "1";
-    // image.style.(-webkit-filter) = "grayscale(100%)";
-    image.style.filter = image.style.filter === "grayscale(100%)" ? "grayscale(100%)" : "grayscale(0%)";
+const changeImgColor = (image) => {
+    image.classList.toggle("gray")
+    console.log("halo")
 }
 
 // GALLERY IMAGES - make img bigger and put it in the center
@@ -68,8 +67,8 @@ const changeImgLeft = () => {
 }
 
 galleryImages.forEach(image => {
-    image.addEventListener("mouseover", function() {changeOpacity(image)});
-    image.addEventListener("mouseout", function() {changeOpacity(image)});
+    image.addEventListener("mouseover", function() {changeImgColor(image)});
+    image.addEventListener("mouseout", function() {changeImgColor(image)});
     image.addEventListener("click", function() {showBigImage(image)});
     }
 )

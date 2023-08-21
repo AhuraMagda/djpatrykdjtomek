@@ -90,7 +90,7 @@
         $mail->isSMTP(); // using SMTP protocol                                     
         $mail->Host = 'smtp.gmail.com'; // SMTP host as gmail 
         $mail->SMTPAuth = true;  // enable smtp authentication                             
-        $mail->Username = '@gmail.com';  // sender gmail host              
+        $mail->Username = 'djpatryk.djtomek@gmail.com';  // sender gmail host              
         $mail->Password = '************'; // sender gmail host password                          
         $mail->SMTPSecure = 'tls';  // for encrypted connection                           
         $mail->Port = 587;   // port for SMTP     
@@ -98,7 +98,7 @@
 
         $mail->setFrom($email, 'djpatrykdjtomek.pl'); // sender's email and name
         $mail->AddReplyTo($email, $name);
-        $mail->addAddress('***********@gmail.com', "Name");  // receiver's email and name
+        $mail->addAddress('lubaszka.magda@gmail.com', "Magda");  // receiver's email and name
         $mail->isHTML(true);
 
         $mail->Subject = $subject;

@@ -72,21 +72,21 @@
         </section>
         <section class="gallery-section" id="galeria">
             <div class="gallery">
-                <img class="gallery__img" id="gallery__img-1" src="./images/gallery/gallery-1.jpg" alt="">
-                <img class="gallery__img" id="gallery__img-2" src="./images/gallery/gallery-2.jpg" alt="">
-                <img class="gallery__img" id="gallery__img-3" src="./images/gallery/gallery-3.jpg" alt="">
-                <img class="gallery__img" id="gallery__img-4" src="./images/gallery/gallery-4.jpg" alt="">
-                <img class="gallery__img" id="gallery__img-5" src="./images/gallery/gallery-5.jpg" alt="">
-                <img class="gallery__img" id="gallery__img-6" src="./images/gallery/gallery-6.jpg" alt="">
-                <img class="gallery__img" id="gallery__img-7" src="./images/gallery/gallery-7.jpg" alt="">
-                <img class="gallery__img" id="gallery__img-8" src="./images/gallery/gallery-8.jpg" alt="">
-                <img class="gallery__img" id="gallery__img-9" src="./images/gallery/gallery-5.jpg" alt="">
-                <img class="gallery__img" id="gallery__img-10" src="./images/gallery/gallery-2.jpg" alt="">
-                <img class="gallery__img" id="gallery__img-11" src="./images/gallery/gallery-3.jpg" alt="">
-                <img class="gallery__img" id="gallery__img-12" src="./images/gallery/gallery-1.jpg" alt="">
-                <img class="gallery__img" id="gallery__img-13" src="./images/gallery/gallery-2.jpg" alt="">
-                <img class="gallery__img" id="gallery__img-14" src="./images/gallery/gallery-3.jpg" alt="">
-                <img class="gallery__img" id="gallery__img-15" src="./images/gallery/gallery-5.jpg" alt="">
+                <img class="gallery__img gray" id="gallery__img-1" src="./images/gallery/gallery-img-1.jpg" alt="">
+                <img class="gallery__img gray" id="gallery__img-2" src="./images/gallery/gallery-img-2.jpg" alt="">
+                <img class="gallery__img gray" id="gallery__img-3" src="./images/gallery/gallery-img-3.jpg" alt="">
+                <img class="gallery__img gray" id="gallery__img-4" src="./images/gallery/gallery-img-4.jpg" alt="">
+                <img class="gallery__img gray" id="gallery__img-5" src="./images/gallery/gallery-img-5.jpg" alt="">
+                <img class="gallery__img gray" id="gallery__img-6" src="./images/gallery/gallery-img-6.jpg" alt="">
+                <img class="gallery__img gray" id="gallery__img-7" src="./images/gallery/gallery-img-7.jpg" alt="">
+                <img class="gallery__img gray" id="gallery__img-8" src="./images/gallery/gallery-img-8.jpg" alt="">
+                <img class="gallery__img gray" id="gallery__img-9" src="./images/gallery/gallery-img-9.jpg" alt="">
+                <img class="gallery__img gray" id="gallery__img-10" src="./images/gallery/gallery-img-10.jpg" alt="">
+                <img class="gallery__img gray" id="gallery__img-11" src="./images/gallery/gallery-img-11.jpg" alt="">
+                <img class="gallery__img gray" id="gallery__img-12" src="./images/gallery/gallery-img-12.jpg" alt="">
+                <img class="gallery__img gray" id="gallery__img-13" src="./images/gallery/gallery-img-13.jpg" alt="">
+                <img class="gallery__img gray" id="gallery__img-14" src="./images/gallery/gallery-img-14.jpg" alt="">
+                <img class="gallery__img gray" id="gallery__img-15" src="./images/gallery/gallery-img-15.jpg" alt="">
             </div>
         </section>
 
@@ -94,47 +94,55 @@
         <section class="videos-section" id="video">
             <h2>Zobacz filmiki z naszych imprez</h2>
 
-            <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-            <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-            <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+            <iframe src="./images/videos/video1.mp4"></iframe>
 
         </section>
         <section class="contact-section" id="kontakt">
             <div class="contact">
 
-                <div class="contact__form-wrapfper">
+                <div class="contact__form-wrapper">
                     
                     <form class="contact__form neon-border-two" action="send-email.php" method="POST">
 
                         <h2>Wypełnij formularz</h2>
                         <p>a my przedstawimy wycenę</p>
-                        
-                        <label for="name">Imię i nazwisko:</label>
-                        <input type="text" id="contact__form__name">
-                        
-                    
-                        <label for="phone">Telefon:</label>
-                        <input type="number" id="contact__form__phone">
-                        
-                    
-                        <label for="email">Email:</label>
-                        <input type="text" id="contact__form__email">
-                        
 
-                        <label for="date">Data Imprezy:</label>
-                        <input type="date" id="contact__form__date">
+                        <div>
+                            <label for="name">Imię i nazwisko:</label>
+                            <input type="text" id="contact__form__name">
+                        </div>
                         
+                        <div>
+                            <label for="phone">Telefon:</label>
+                            <input type="number" id="contact__form__phone">
+                        </div>
                     
-                        <label for="time">Czas trwania:</label>
-                        <input type="text" id="contact__form__time">
+                        <div>
+                            <label for="email">Email:</label>
+                            <input type="text" id="contact__form__email">
+                        </div>
                         
-                    
-                        <label for="guests">Szacowana liczba gości:</label>
-                        <input type="number" id="contact__form__guests">
+                        <div>
+                            <label for="date">Data Imprezy:</label>
+                            <input type="date" id="contact__form__date">
+                        </div>
                         
-                    
-                        <label for="comment">Uwagi:</label>
-                        <textarea name="comment" id="contact__form__comment" form=""></textarea>
+                        <div>
+                            <label for="time">Czas trwania:</label>
+                            <input type="text" id="contact__form__time">
+                        </div>
+
+                        <div>
+                            <label for="guests">Szacowana liczba gości:</label>
+                            <input type="number" id="contact__form__guests">
+                        </div>
+                        
+                        <div>
+                            <label for="comment">Uwagi:</label>
+                            <textarea name="comment" id="contact__form__comment" form=""></textarea>
+                        </div>
+                       
+
                             
                         
                         <button class="contact__form__button">wyślij</button>
