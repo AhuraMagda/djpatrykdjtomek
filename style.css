@@ -291,7 +291,8 @@ header {
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    height: 100vh;
+    grid-auto-rows: 1fr;
+    /* height: 100vh; */
     overflow: hidden;
     width: 100vw;
     position: relative;
@@ -301,6 +302,10 @@ header {
     height: 100%;
     object-fit: cover;
     width: 100%;
+}
+
+.display-on-big {
+    display: none;
 }
 
 .gray {
@@ -535,58 +540,6 @@ header {
 
   }
 
-@media screen and (orientation: landscape) {
-    .about-us {
-        flex-direction: row;
-    }
-    
-}
-
-@media screen and (min-width: 700px) {
-
-    .gallery {
-        grid-template-columns: repeat(5, 1fr);
-    }
-    .contact__form-wrapper {
-        width: 60vw;
-        min-width: 400px;
-        max-width: 700px;
-    }
-    .contact-section {
-        display: flex;
-    }
-}
-
-@media screen and (min-width: 1000px) {
-    .contact__form-wrapper {
-        padding: 0;
-    }
-    .contact-section {
-        height: 100vh;
-        display: flex;
-    }
-    .contact {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        width: 100%;
-    }
-    .contact__form div {
-        display: flex;
-        align-items: center;
-    }
-}
-
-@media screen and (min-width: 1800px) {
-    .intro__back-img-up {
-        left: -15%;
-    }
-    
-    .intro__back-img-down {
-        right: -30%;
-    }
-}
-
 
 /* footer */
 
@@ -608,4 +561,61 @@ footer a {
 
 footer a:hover {
     color: var(--logo-orange);
+}
+
+@media screen and (orientation: landscape) {
+    .about-us {
+        flex-direction: row;
+    }
+    
+}
+
+@media screen and (min-width: 700px) {
+    .gallery {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .contact__form-wrapper {
+        width: 60vw;
+        min-width: 400px;
+        max-width: 700px;
+    }
+    .contact-section {
+        display: flex;
+    }
+    .display-on-big {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .contact__form-wrapper {
+        padding: 0;
+    }
+    .contact-section {
+        height: 100vh;
+        display: flex;
+    }
+    .contact {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    .contact__form div {
+        display: flex;
+        align-items: center;
+    }
+    .nav__logo {
+    height: 100px;
+}
+}
+
+@media screen and (min-width: 1800px) {
+    .intro__back-img-up {
+        left: -15%;
+    }
+    
+    .intro__back-img-down {
+        right: -30%;
+    }
 }
