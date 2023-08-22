@@ -33,11 +33,11 @@ nav {
     background-color: hsl(0deg 0% 0% / 30%);
     display: flex;
     font-size: 1.5rem;
+    justify-content: space-between;
     padding: 15px;
     position: fixed;
     width: 100%;
     z-index: 2;
-    justify-content: space-between;
 }
 
 .nav__logo {
@@ -47,6 +47,7 @@ nav {
 nav ul {
     align-items: center;
     background-color: var(--background-blue);
+    border: 2px solid black;
     display: flex;
     flex-direction: column;
     height: 60vh;
@@ -56,13 +57,12 @@ nav ul {
     text-align: center;
     top: 15vh;
     transform: translate(100%);
-    border: 2px solid black;
 }
 
 nav ul li {
     color: rgb(206, 205, 205);
-    list-style: none;
     padding: 25px 30px;
+    list-style: none;
 }
 
 nav ul li a {
@@ -166,8 +166,6 @@ header {
     width: 16em;
     display: flex;
     justify-content: center;
-    /* border-bottom: 2px solid rgb(63 29 75);
-    border-top: 2px solid rgb(63 29 75); */
   }
   
 .scroller > span {
@@ -207,6 +205,7 @@ header {
       transform: rotate(360deg);
     } 
   }
+
 
 /* ABOUT US - SECTION */
 
@@ -261,24 +260,23 @@ header {
 }
 
 #about-us__list-01::before {
-    background-image: url(./images/icon-location.png);
+    background-image: url(./images/icon-aboutus-location.png);
 }
 
 #about-us__list-02::before {
-    background-image: url(./images/icon-party.png);
+    background-image: url(./images/icon-aboutus-party.png);
 }
 
-
 #about-us__list-1::before {
-    background-image: url(./images/icon-pink.png);
+    background-image: url(./images/icon-aboutus-wave.png);
 }
 
 #about-us__list-3::before {
-    background-image: url(./images/icon-light.png);
+    background-image: url(./images/icon-aboutus-light.png);
 }
 
 #about-us__list-2::before {
-    background-image: url(./images/icon-note.png);
+    background-image: url(./images/icon-aboutus-note.png);
 }
 
 .about-us__text {
@@ -288,7 +286,7 @@ header {
 }
 
 
-/* GALLERY - SECTION */
+/* GALLERY */
 
 .gallery {
     display: grid;
@@ -337,7 +335,7 @@ header {
 .gallery__big-img__btn-hide {
     height: 30px;
     width: 30px;
-    background-image: url(./images/icon-close.png);
+    background-image: url(./images/icon-gallery-close.png);
     background-size: cover;
     position: absolute;
     top: 20px;
@@ -350,7 +348,7 @@ header {
     height: 40px;
     width: 40px;
     margin: 10px;
-    background-image: url(./images/icon-arrow-left.png);
+    background-image: url(./images/icon-gallery-arrow-left.png);
     background-size: cover;
 
 }
@@ -361,11 +359,12 @@ header {
     right: 0;
     width: 40px;
     margin: 10px;
-    background-image: url(./images/icon-arrow-right.png);
+    background-image: url(./images/icon-gallery-arrow-right.png);
     background-size: cover;
 }
 
-/* section VIDEOS */
+
+/* VIDEOS */
 
 .videos-section {
     background-color: var(--background-blue);
@@ -384,7 +383,9 @@ header {
     margin: 10px;
 }
 
+
 /* CONTACT */
+
 .contact-section {
     background-color: black;
     color: white;
@@ -450,6 +451,26 @@ header {
     padding: 10px;
 }
 
+.contact__form label {
+    width: 40%;
+}
+
+.contact__form__input {
+    background-color: transparent;
+    border: 1px solid rgb(171, 171, 171);
+    color: rgb(215, 215, 215);
+    width: 100%;
+    padding: 10px;
+}
+
+.contact__form__input::placeholder {
+    color: rgb(128, 128, 128);
+}
+
+#contact__form__date::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
 .contact__form__button {
     background-color: var(--logo-orange);
     padding: 10px 20px;
@@ -471,27 +492,8 @@ header {
     inset 0 0 1.1rem var(--neon2); 
 }
 
-.contact__form label {
-
-    width: 40%;
-}
-
-.contact__form input, .contact__form textarea {
-    background-color: transparent;
-    border: 1px solid rgb(171, 171, 171);
-    color: rgb(215, 215, 215);
-    width: 100%;
-    padding: 10px;
-}
-
-.contact__form input::placeholder {
-    color: black;
-}
-
 
 /* EFFECTS */
-
-
 .neon-border {
     box-shadow: 0 0 .2rem #494949,
     0 0 .2rem #5a5a5a,
@@ -510,23 +512,11 @@ header {
     inset 0 0 1.1rem var(--neon2); 
 }
 
-
 .neonText {
     color: var(--neon);
     text-shadow:
     0 0 7px var(--neon), 0 0 10px var(--neon), 0 0 11px var(--neon), 0 0 2px var(--neon), 0 0 2px var(--neon), 0 0 2px var(--neon), 0 0 2px var(--neon), 0 0 0px var(--neon)
   }
-/* 
-
-.neon-text-pink {
-    text-shadow:
-    0 0 7px #e6007e, 0 0 2px #e6007e, 0 0 2px #e6007e, 0 0 2px #e6007e, 0 0 2px #e6007e, 0 0 2px #e6007e, 0 0 2px #e6007e, 0 0 0px #e6007e;
-} */
-
-
-
-
-
 
 
 @keyframes slide {
@@ -551,7 +541,6 @@ header {
     }
     
 }
-
 
 @media screen and (min-width: 700px) {
 

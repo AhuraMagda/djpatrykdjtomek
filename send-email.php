@@ -27,7 +27,7 @@
             padding-bottom: 20px;
         }
         body {
-            background-color: #CFB49D;
+            background-color: #151641;
         }
         div {
             padding: 20px;
@@ -42,7 +42,7 @@
 </head>
 <body>
     <header>
-        <img id="logo" src="./images/logo.jpg" alt="logo">
+        <img id="logo" src="./images/logo.svg" alt="logo">
         <a href="http://djpatrykdjtomek.pl">Wróć na stronę główną</a>
     </header>
 
@@ -58,7 +58,7 @@
     $date = $_POST["contact__form__date"];
     $time = $_POST["contact__form__time"];
     $guests = $_POST["contact__form__guests"];
-    $comment = $_POST["contact__form__comment"];
+    // $comment = $_POST["contact__form__comment"];
 
     $subject = "Nowe zapytanie";
     $message = "
@@ -73,7 +73,7 @@
     <p>Data: $date</p>
     <p>Czas trwania: $time</p>
     <p>Liczba gości: $guests</p>
-    <p>Dodatkowe informacje: $comment</p>
+ 
     ";
 
 
@@ -91,12 +91,12 @@
         $mail->Host = 'smtp.gmail.com'; // SMTP host as gmail 
         $mail->SMTPAuth = true;  // enable smtp authentication                             
         $mail->Username = 'djpatryk.djtomek@gmail.com';  // sender gmail host              
-        $mail->Password = '************'; // sender gmail host password                          
+        $mail->Password = 'ulvbxcoxpktrmmih'; // sender gmail host password                          
         $mail->SMTPSecure = 'tls';  // for encrypted connection                           
         $mail->Port = 587;   // port for SMTP     
         $mail->CharSet = 'UTF-8';
 
-        $mail->setFrom($email, 'djpatrykdjtomek.pl'); // sender's email and name
+        $mail->setFrom($email, 'djpatrykdjtomek'); // sender's email and name
         $mail->AddReplyTo($email, $name);
         $mail->addAddress('lubaszka.magda@gmail.com', "Magda");  // receiver's email and name
         $mail->isHTML(true);
@@ -115,7 +115,7 @@
             <p>Telefon: $phone </p> 
             <p>E-mail: $email </p> 
         </div>
-            ";;
+            ";
         
     } catch (Exception $e) { // handle error.
         echo 'Wiadomość nie mogła zostać wysłana.', $mail->ErrorInfo;
