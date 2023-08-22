@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;1,400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,400&display=swap" rel="stylesheet">
     <title>DJ Patryk & DJ Tomek</title>
     <style>
         * {
-            font-family: 'Lora', serif;
+            font-family: 'Lato', sans-serif;
             margin: 0;
+            color: white;
         }
         #logo {
             width: 300px;
@@ -23,7 +24,7 @@
             padding: 20px;
         }
         h1 {
-            color: black;
+            color: white;
             padding-bottom: 20px;
         }
         body {
@@ -33,7 +34,7 @@
             padding: 20px;
         }
         a {
-            color: black;
+            color: white;
         }
         p {
             padding: 10px 0px; 
@@ -56,6 +57,7 @@
     $phone = $_POST["contact__form__phone"];
     $email = $_POST["contact__form__email"];
     $date = $_POST["contact__form__date"];
+    $place = $_POST["contact__form__place"];
     $time = $_POST["contact__form__time"];
     $guests = $_POST["contact__form__guests"];
     $comment = $_POST["contact__form__comment"];
@@ -72,6 +74,7 @@
     <h2>Informacje</h2>
     <p>Data: $date</p>
     <p>Czas trwania: $time</p>
+    <p>Miejscowość: $place</p>
     <p>Liczba gości: $guests</p>
     <p>Uwagi: $comment</p>
     ";
@@ -98,7 +101,7 @@
 
         $mail->setFrom($email, 'djpatrykdjtomek'); // sender's email and name
         $mail->AddReplyTo($email, $name);
-        $mail->addAddress('lubaszka.magda@gmail.com', "Magda");  // receiver's email and name
+        $mail->addAddress('kontakt@djpatrykdjtomek.pl', "Zapytanie");  // receiver's email and name
         $mail->isHTML(true);
 
         $mail->Subject = $subject;
@@ -107,9 +110,9 @@
         $mail->send();
         echo "
         <div>
-            <h1>Dziękuję, że wysłałeś nam zapytanie.</h1>
-            <p>Skontaktuję się z Tobą w ciągu 7 dni roboczych w celu ustalenia szczegółów.</p>
-            <p>Jeśli nie dostaniesz żadnej informacji w tym czasie proszę skontaktuj się z nami</p>
+            <h1>Dziękujemy, że wysłałeś nam zapytanie.</h1>
+            <p>Skontaktujemy się w ciągu 24 godzin w celu ustalenia szczegółów.</p>
+            <p>Jeśli nie dostaniesz żadnej informacji w tym czasie proszę skontaktuj się z nami.</p>
             <h2>Podane dane kontaktowe:</h2>
             <p>Imię i nazwisko: $name</p> 
             <p>Telefon: $phone </p> 

@@ -79,9 +79,6 @@ arrowLeft.addEventListener("click", changeImgLeft)
 hideBigImageButton.addEventListener("click", hideBigImage)
 
 
-
-
-
 // HAMBURGER
 const navLinks = document.querySelectorAll("nav ul a")
 const burgerIcon = document.querySelector(".hamburger")
