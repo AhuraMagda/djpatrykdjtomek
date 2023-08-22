@@ -58,7 +58,7 @@
     $date = $_POST["contact__form__date"];
     $time = $_POST["contact__form__time"];
     $guests = $_POST["contact__form__guests"];
-    // $comment = $_POST["contact__form__comment"];
+    $comment = $_POST["contact__form__comment"];
 
     $subject = "Nowe zapytanie";
     $message = "
@@ -73,7 +73,7 @@
     <p>Data: $date</p>
     <p>Czas trwania: $time</p>
     <p>Liczba gości: $guests</p>
- 
+    <p>Uwagi: $comment</p>
     ";
 
 
