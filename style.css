@@ -28,6 +28,16 @@ section {
 }
 
 
+h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+
 /* NAVIGATION */
 
 nav {
@@ -154,6 +164,7 @@ header {
     color: white;
     font-size: clamp(30px, 6vw, 55px);
     margin-top: 10px;
+    margin-bottom: 0px;
     text-align: center;
 }
 
@@ -164,11 +175,12 @@ header {
     line-height: 1.4em;
     overflow: hidden;
     position: relative;
-    width: 16em;
+    width: fit-content;
+    min-width: 30em;
   }
   
 .scroller > span {
-    animation: slide 5s infinite;
+    animation: slide 7s infinite;
     font-weight: bold;
     position: absolute;
     top: 0px;
@@ -237,9 +249,6 @@ header {
     padding: 0 20px;
 }
 
-.about-us__text h3 {
-    font-size: 1.5rem;
-}
 
 .add-margin-top {
     margin-top: 15px;
@@ -539,14 +548,17 @@ header {
     0% {
         top: 0;
     }
-    25% {
+    20% {
         top: -3.4em;
     }
-    50% {
+    40% {
         top: -6.8em;
     }
-    75%, 100% {
+    60% {
         top: -10.2em;
+    }
+    80%, 100% {
+        top: -13.6em;
     }
   }
 
