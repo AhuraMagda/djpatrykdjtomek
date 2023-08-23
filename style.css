@@ -31,6 +31,7 @@ section {
 /* NAVIGATION */
 
 nav {
+    align-items: center;
     background-color: hsl(0deg 0% 0% / 30%);
     display: flex;
     font-size: 1.5rem;
@@ -81,9 +82,6 @@ nav ul li a {
 .hamburger {
     height: 50px;
     margin: 5px 10px;
-    position: absolute;
-    right: 5%;
-    top: 20px;
     width: 50px;
     z-index: 5;
   }
@@ -596,6 +594,10 @@ footer a:hover {
     .display-on-big {
         display: block;
     }
+    nav {
+    padding: 15px 40px;
+
+}
 }
 
 @media screen and (min-width: 1000px) {
