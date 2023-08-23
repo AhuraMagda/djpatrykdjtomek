@@ -78,7 +78,6 @@ arrowLeft.addEventListener("click", changeImgLeft)
 
 hideBigImageButton.addEventListener("click", hideBigImage)
 
-
 // HAMBURGER
 const navLinks = document.querySelectorAll("nav ul a")
 const burgerIcon = document.querySelector(".hamburger")
@@ -110,4 +109,10 @@ navLinks.forEach(link=>{link.addEventListener("click", () => {
 
 // add copyright
 
-document.querySelector("#footer__date").innerText = `Copyright © ${new Date().getFullYear()} Migas`;
+document.querySelector("#footer__date").innerText = `Copyright © ${new Date().getFullYear()} DJ Patryk DJ Tomek`;
+
+// preloader
+const loader = document.querySelector("#preloader");
+window.addEventListener("load", function() {
+    loader.style.display = "none";
+})
