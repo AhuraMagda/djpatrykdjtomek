@@ -109,7 +109,7 @@ navLinks.forEach(link=>{link.addEventListener("click", () => {
 
 // add copyright
 
-document.querySelector("#footer__date").innerText = `Copyright © ${new Date().getFullYear()} DJ Patryk DJ Tomek`;
+document.querySelector("#footer__date").innerText = `© ${new Date().getFullYear()} DJ\xA0Patryk\xA0DJ\xA0Tomek`;
 
 // preloader
 const loader = document.querySelector("#preloader");
