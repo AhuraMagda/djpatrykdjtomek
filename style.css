@@ -246,16 +246,15 @@ header {
     width: 30vw;
 }
 
-.about-us__text {
-    padding: 0 20px;
-}
-
-
 .add-margin-top {
     margin-top: 15px;
 }
 
-.about-us__list li {
+.about-us__text {
+    padding: 0 20px;
+}
+
+.about-us__text p {
     list-style: none;
     padding: 25px 20px 25px 50px;
     position: relative;
@@ -263,7 +262,7 @@ header {
     max-width: 500px;
 }
 
-.about-us__list li::before {
+.about-us__text p::before {
     background-size: cover;
     bottom: 0;
     content: "";
@@ -275,30 +274,24 @@ header {
     width: 50px;
 }
 
-#about-us__list-01::before {
+#about-us__text-01::before {
     background-image: url(./images/icon-aboutus-location.png);
 }
 
-#about-us__list-02::before {
+#about-us__text-02::before {
     background-image: url(./images/icon-aboutus-party.png);
 }
 
-#about-us__list-1::before {
+#about-us__text-1::before {
     background-image: url(./images/icon-aboutus-wave.png);
 }
 
-#about-us__list-3::before {
+#about-us__text-3::before {
     background-image: url(./images/icon-aboutus-light.png);
 }
 
-#about-us__list-2::before {
+#about-us__text-2::before {
     background-image: url(./images/icon-aboutus-note.png);
-}
-
-.about-us__text {
-    display: flex;
-    align-self: center;
-    justify-content: center;
 }
 
 

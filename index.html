@@ -57,19 +57,17 @@
         <section class="about-us-section scroll-snap" id="o-nas">
             <div class="about-us">
                 <img class="about-us__photo" src="./images/patryk-tomek.jpg" alt="DJ Patryk oraz DJ Tomek">
+                <div class="about-us__text">                
 
-                <div class="about-us__text">
-                    
-                    <ul class="about-us__list">
                         <h3>Gdzie działamy?</h3>
-                        <li id="about-us__list-01">Głównie małopolska, śląsk i świętokrzyskie</li>
+                        <p id="about-us__text-01">Głównie małopolska, śląsk i świętokrzyskie</p>
                         <h3 class="add-margin-top">Co robimy?</h3>
-                        <li id="about-us__list-02">Wesela, imprezy okolicznościowe i firmowe</li>
+                        <p id="about-us__text-02">Wesela, imprezy okolicznościowe i firmowe</p>
                         <h3 class="add-margin-top">Dlaczego warto nas wybrać?</h3>   
-                        <li id="about-us__list-1">W każdą uroczystość wkładamy 100% wysiłków</li>
-                        <li id="about-us__list-2">Jesteśmy otwarci na każdy gatunek muzyki</li>
-                        <li id="about-us__list-3">Używamy wysokiej jakości sprzętu</li>
-                    </ul>
+                        <p id="about-us__text-1">W każdą uroczystość wkładamy 100% wysiłków</p>
+                        <p id="about-us__text-2">Jesteśmy otwarci na każdy gatunek muzyki</p>
+                        <p id="about-us__text-3">Używamy wysokiej jakości sprzętu</p>
+
                 </div>
             </div>
             
@@ -119,42 +117,42 @@
                         <p>a my przedstawimy wycenę</p>
 
                         <div>
-                            <label for="name">Imię i nazwisko:</label>
+                            <label for="contact__form__name">Imię i nazwisko:</label>
                             <input class="contact__form__input" type="text" name="contact__form__name" id="contact__form__name" required placeholder="Imię Nazwisko">
                         </div>
                         
                         <div>
-                            <label for="phone">Telefon:</label>
+                            <label for="contact__form__phone">Telefon:</label>
                             <input class="contact__form__input" type="tel" name="contact__form__phone" id="contact__form__phone" pattern="[0-9]{9}" required placeholder="123456789">
                         </div>
                     
                         <div>
-                            <label for="email">Email:</label>
+                            <label for="contact__form__email">Email:</label>
                             <input class="contact__form__input" type="text" name="contact__form__email" id="contact__form__email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required placeholder="mójemail@email.com">
                         </div>
                         
                         <div>
-                            <label for="date">Data Imprezy:</label>
+                            <label for="contact__form__date">Data Imprezy:</label>
                             <input class="contact__form__input" type="date" name="contact__form__date" id="contact__form__date">
                         </div>
                         
                         <div>
-                            <label for="place">Miejscowość:</label>
+                            <label for="contact__form__place">Miejscowość:</label>
                             <input class="contact__form__input" type="text" name="contact__form__place" id="contact__form__place" required placeholder="miejscowość">
                         </div>
 
                         <div>
-                            <label for="time">Czas trwania:</label>
+                            <label for="contact__form__time">Czas trwania:</label>
                             <input class="contact__form__input" type="text" name="contact__form__time" id="contact__form__time" required placeholder="orientacyjna liczba godzin">
                         </div>
 
                         <div>
-                            <label for="guests">iczba gości:</label>
+                            <label for="contact__form__guests">iczba gości:</label>
                             <input class="contact__form__input" type="number" name="contact__form__guests" id="contact__form__guests" required placeholder="orientacyjna liczba">
                         </div>
                         
                         <div>
-                            <label for="comment">Uwagi:</label>
+                            <label for="contact__form__comment">Uwagi:</label>
                             <textarea class="contact__form__input" name="contact__form__comment" id="contact__form__comment"></textarea>
                         </div>
                        
