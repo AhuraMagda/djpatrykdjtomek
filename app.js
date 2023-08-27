@@ -1,18 +1,12 @@
 
-
-
-
-
 // navLogo.addEventListener("click", moveIntroText)
 
 // GALLERY IMAGES - change opacity
 
 const galleryImages = document.querySelectorAll(".gallery__img")
-console.log(galleryImages)
 
 const changeImgColor = (image) => {
     image.classList.toggle("gray")
-    console.log("halo")
 }
 
 // GALLERY IMAGES - make img bigger and put it in the center
@@ -33,8 +27,6 @@ const arrowRight = document.createElement('span')
 arrowRight.classList.add("gallery__big-img__arrow-right")
 
 const gallery = document.querySelector(".gallery")
-
-
 
 const showBigImage = (image) => {
     bigImage.src = image.src
