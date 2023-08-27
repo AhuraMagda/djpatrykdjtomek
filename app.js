@@ -1,13 +1,18 @@
 
-// navLogo.addEventListener("click", moveIntroText)
-
-// GALLERY IMAGES - change opacity
+// GALLERY IMAGES - change color
 
 const galleryImages = document.querySelectorAll(".gallery__img")
 
 const changeImgColor = (image) => {
     image.classList.toggle("gray")
 }
+
+galleryImages.forEach(image => {
+    image.addEventListener("mouseover", function() {changeImgColor(image)});
+    image.addEventListener("mouseout", function() {changeImgColor(image)});
+    image.addEventListener("click", function() {showBigImage(image)});
+    }
+)
 
 // GALLERY IMAGES - make img bigger and put it in the center
 
@@ -58,13 +63,6 @@ const changeImgLeft = () => {
     bigImage.id = galleryImages[newId].id
 }
 
-galleryImages.forEach(image => {
-    image.addEventListener("mouseover", function() {changeImgColor(image)});
-    image.addEventListener("mouseout", function() {changeImgColor(image)});
-    image.addEventListener("click", function() {showBigImage(image)});
-    }
-)
-
 arrowRight.addEventListener("click", changeImgRight)
 arrowLeft.addEventListener("click", changeImgLeft)
 
@@ -98,12 +96,12 @@ navLinks.forEach(link=>{link.addEventListener("click", () => {
 })})
 
 
-
 // add copyright
 
 document.querySelector("#footer__date").innerText = `© ${new Date().getFullYear()} DJ\xA0Patryk\xA0DJ\xA0Tomek`;
 
 // preloader
+
 const loader = document.querySelector("#preloader");
 window.addEventListener("load", function() {
     loader.style.display = "none";
