@@ -114,7 +114,6 @@
             src="./images/gallery/gallery-img-1.jpg"
             alt="DJ i ludzie na parkiecie"
           />
-          <!-- inne -->
           <img
             class="gallery__img gray"
             id="gallery__img-2"
@@ -203,13 +202,21 @@
       </section>
 
       <section class="videos-section" id="video">
-        <h2>Zobacz filmiki z naszych imprez</h2>
+        <h2>Zobacz filmiki z&nbspnaszych&nbspimprez</h2>
         <div class="videos">
           <video controls>
             <source src="./videos/video1.mp4" type="video/mp4" />
           </video>
           <video controls>
             <source src="./videos/video2.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="videos">
+          <video controls>
+            <source src="./videos/video3.mp4" type="video/mp4" />
+          </video>
+          <video controls>
+            <source src="./videos/video4.mp4" type="video/mp4" />
           </video>
         </div>
       </section>
@@ -268,6 +275,17 @@
                   type="date"
                   name="contact__form__date"
                   id="contact__form__date"
+                />
+              </div>
+              <div>
+                <label for="contact__form__type">Rodzaj imprezy:</label>
+                <input
+                  class="contact__form__input"
+                  type="text"
+                  name="contact__form__type"
+                  id="contact__form__type"
+                  required
+                  placeholder="np. Wesele"
                 />
               </div>
               <div>

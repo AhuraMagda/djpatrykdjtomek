@@ -224,7 +224,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 70px 10px;
+  padding: 100px 10px;
   width: 100%;
 }
 
@@ -372,12 +372,13 @@ header {
   background-color: var(--background-blue);
   color: var(--text-white);
   flex-direction: column;
-  padding: 100px 10px;
+  padding: 150px 10px;
 }
 
 .videos {
   align-items: center;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
 }
