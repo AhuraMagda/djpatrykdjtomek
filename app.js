@@ -87,13 +87,13 @@ const hamburgerBottomBun = document.querySelector(".bottom-bun");
 const hamburgerMeat = document.querySelector(".meat");
 
 const changeBurgerToX = () => {
-  hamburgerTopBun.classList.toggle("hamburger--top-bun_clicked");
-  hamburgerBottomBun.classList.toggle("hamburger--bottom-bun_clicked");
-  hamburgerMeat.classList.toggle("hamburger--meat_clicked");
+  hamburgerTopBun.classList.toggle("hamburger__top-bun_clicked");
+  hamburgerBottomBun.classList.toggle("hamburger__bottom-bun_clicked");
+  hamburgerMeat.classList.toggle("hamburger__meat_clicked");
 };
 
 burgerIcon.addEventListener("click", function () {
-  mobileNav.classList.toggle("nav-active");
+  mobileNav.classList.toggle("nav__ul__active");
   changeBurgerToX();
 });
 
@@ -101,7 +101,7 @@ burgerIcon.addEventListener("click", function () {
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    mobileNav.classList.remove("nav-active");
+    mobileNav.classList.remove("nav__ul__active");
     changeBurgerToX();
   });
 });

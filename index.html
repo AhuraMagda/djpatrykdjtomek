@@ -31,13 +31,13 @@
       <img src="./images/logo.svg" alt="" />
       <div class="dot-stretching"></div>
     </div>
-    <nav>
+    <nav class="nav">
       <img
         class="nav__logo"
         src="./images/logo.svg"
         alt="logo DJ Patryk DJ Tomek"
       />
-      <ul>
+      <ul class="nav__ul">
         <li><a href="#o-nas">O NAS</a></li>
         <li><a href="#galeria">GALERIA</a></li>
         <li><a href="#video">VIDEO</a></li>
@@ -67,42 +67,42 @@
         </div>
       </div>
       <img
-        class="intro__back-img-up"
+        class="intro__back__img-up"
         src="./images/fale.png"
         alt="ozdobne fale"
       />
       <img
-        class="intro__back-img-down"
+        class="intro__back__img-down"
         src="./images/fale.png"
         alt="ozdobne fale"
       />
     </header>
 
     <main>
-      <section class="about-us-section scroll-snap" id="o-nas">
-        <div class="about-us">
+      <section class="about-us scroll-snap" id="o-nas">
+        <div class="about-us__wrapper">
           <img
-            class="about-us__photo"
+            class="about-us__wrapper__photo"
             src="./images/patryk-tomek.jpg"
             alt="DJ Patryk oraz DJ Tomek"
           />
-          <div class="about-us__text">
+          <div class="about-us__wrapper__text">
             <h3>Gdzie działamy?</h3>
-            <p id="about-us__text-01">
+            <p class="about-us__wrapper__text__p about-us__wrapper__text__p__1">
               Głównie małopolska, śląsk i świętokrzyskie
             </p>
             <h3 class="add-margin-top">Co robimy?</h3>
-            <p id="about-us__text-02">
+            <p class="about-us__wrapper__text__p about-us__wrapper__text__p__2">
               Wesela, imprezy okolicznościowe i firmowe
             </p>
             <h3 class="add-margin-top">Dlaczego warto nas wybrać?</h3>
-            <p id="about-us__text-1">
+            <p class="about-us__wrapper__text__p about-us__wrapper__text__p__3">
               W każdą uroczystość wkładamy 100% wysiłków
             </p>
-            <p id="about-us__text-2">
+            <p class="about-us__wrapper__text__p about-us__wrapper__text__p__4">
               Jesteśmy otwarci na każdy gatunek muzyki
             </p>
-            <p id="about-us__text-3">Używamy wysokiej jakości sprzętu</p>
+            <p class="about-us__wrapper__text__p about-us__wrapper__text__p__5">Używamy wysokiej jakości sprzętu</p>
           </div>
         </div>
       </section>
@@ -168,7 +168,7 @@
             src="./images/gallery/gallery-img-10.jpg"
             alt="grający DJ"
           />
-          <img
+          <!-- <img
             class="gallery__img gray display-on-big"
             id="gallery__img-11"
             src="./images/gallery/gallery-img-11.jpg"
@@ -197,7 +197,7 @@
             id="gallery__img-15"
             src="./images/gallery/gallery-img-15.jpg"
             alt="tańczący ludzie na weselu"
-          />
+          /> -->
         </div>
       </section>
 
@@ -206,7 +206,7 @@
         <div class="contact">
           <div class="contact__form-wrapper">
             <form
-              class="contact__form neon-border-two"
+              class="contact__form"
               action="send-email.php"
               method="post"
             >
@@ -316,56 +316,60 @@
               </button>
             </form>
           </div>
-          <div class="contact__media">
-            <h2>Lub skontaktuj się z nami</h2>
-            <ul>
-              <li>
-                <a href="tel:048600181040"
-                  ><img src="./images/icon-contact-phone.png" alt="phone icon"
-                /></a>
-                <a href="tel:048600181040">Patryk: 600 181 040</a>
-              </li>
-              <li>
-                <a href="tel:048730831220"
-                  ><img src="./images/icon-contact-phone.png" alt="phone icon"
-                /></a>
-                <a href="tel:048730831220">Tomek: 730 831 220</a>
-              </li>
-              <li>
-                <a href="mailto:kontakt@djpatrykdjtomek.pl" 
-                  ><img src="./images/icon-contact-email.png" alt="email icon"
-                /></a>
-                <a href="mailto:kontakt@djpatrykdjtomek.pl"
-                  >kontakt@djpatrykdjtomek.pl</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100057328102621" rel=noreferrer
-                  ><img
-                    src="./images/icon-contact-facebook.png"
-                    alt="facebook icon"
-                /></a>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100057328102621" rel=noreferrer
-                  >@djpatrykdjtomek</a
-                >
-              </li>
-            </ul>
-          </div>
+         
         </div>
       </section>
     </main>
+
     <footer>
-      <p id="footer__date"></p>
-      <p>
-        Website by
-        <a href="https://github.com/AhuraMagda" target="_blank" rel=noreferrer>M.Lubaszka</a>
-      </p>
-      <p>
-        Graphics by
-        <a href="https://aleksandrasroka.com/" target="_blank" rel=noreferrer>A.Sroka</a>
-      </p>
+      <div class="contact__media">
+        <h2>Lub skontaktuj się z nami</h2>
+        <ul>
+          <li>
+            <a href="tel:048600181040"
+              ><img src="./images/icon-contact-phone.png" alt="phone icon"
+            /></a>
+            <a href="tel:048600181040">Patryk: 600 181 040</a>
+          </li>
+          <li>
+            <a href="tel:048730831220"
+              ><img src="./images/icon-contact-phone.png" alt="phone icon"
+            /></a>
+            <a href="tel:048730831220">Tomek: 730 831 220</a>
+          </li>
+          <li>
+            <a href="mailto:kontakt@djpatrykdjtomek.pl" 
+              ><img src="./images/icon-contact-email.png" alt="email icon"
+            /></a>
+            <a href="mailto:kontakt@djpatrykdjtomek.pl"
+              >kontakt@djpatrykdjtomek.pl</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/profile.php?id=100057328102621" rel=noreferrer
+              ><img
+                src="./images/icon-contact-facebook.png"
+                alt="facebook icon"
+            /></a>
+            <a
+              href="https://www.facebook.com/profile.php?id=100057328102621" rel=noreferrer
+              >@djpatrykdjtomek</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div>
+        <p id="footer__date"></p>
+        <p>
+          Website by
+          <a href="https://github.com/AhuraMagda" target="_blank" rel=noreferrer>M.Lubaszka</a>
+        </p>
+        <p>
+          Graphics by
+          <a href="https://aleksandrasroka.com/" target="_blank" rel=noreferrer>A.Sroka</a>
+        </p>
+      </div>
     </footer>
     <script src="./app.js" type="text/javascript"></script>
   </body>
