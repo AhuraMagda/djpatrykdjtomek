@@ -404,7 +404,7 @@ header {
 .contact {
   background-color: rgb(36, 36, 36);
   color: white;
-  padding: 100px 0px;
+  padding: 50px 0px;
   display: flex;
   flex-direction: column;
 }
@@ -442,8 +442,7 @@ header {
   flex-direction: column;
   justify-content: center;
   margin: 0px 10px;
-  padding-bottom: 50px;
-  padding-top: 100px;
+  padding: 50px 0px;
   width: 100%;
 }
 @media screen and (min-width: 700px) {
@@ -488,10 +487,12 @@ header {
   filter: invert(1);
 }
 .contact__wrapper__form__button {
+  align-self: end;
   background-color: var(--logo-orange);
   border-style: none;
   border: 1px solid white;
   color: white;
+  margin-right: 10px;
   padding: 10px 20px;
   transition: 0.5s;
 }
@@ -562,13 +563,14 @@ header {
   }
 }
 /* FOOTER */
-footer div {
+footer {
   background-color: #000000;
+}
+footer div {
   color: var(--text-white);
   display: flex;
   justify-content: center;
 }
-
 footer p {
   font-size: 0.8rem;
   padding: 25px 5px 20px 5px;
@@ -576,11 +578,9 @@ footer p {
   width: -moz-fit-content;
   width: fit-content;
 }
-
 footer a {
   color: var(--text-white);
 }
-
 footer a:hover {
   color: var(--logo-orange);
 }
