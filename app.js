@@ -1,6 +1,6 @@
 // GALLERY IMAGES - change color
 
-const galleryImages = document.querySelectorAll(".gallery__img");
+const galleryImages = document.querySelectorAll(".gallery__wrapper__img");
 
 const changeImgColor = (image) => {
   image.classList.toggle("gray");
@@ -17,6 +17,7 @@ galleryImages.forEach((image) => {
     showBigImage(image);
   });
 });
+
 
 // GALLERY IMAGES - make img bigger and put it in the center
 

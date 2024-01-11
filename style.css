@@ -32,6 +32,14 @@ h2 {
 }
 
 h3 {
+  font-size: 2.5rem;
+  background-color: rgb(36, 36, 36);
+  color: white;
+  padding-top: 30px;
+  text-align: center;
+}
+
+h4 {
   font-size: 1.5rem;
 }
 
@@ -205,7 +213,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 100px 10px;
+  padding: 130px 10px;
   width: 100%;
 }
 @media screen and (orientation: landscape) {
@@ -228,7 +236,7 @@ header {
 }
 .about-us__wrapper__text__p {
   list-style: none;
-  padding: 25px 20px 25px 50px;
+  padding: 30px 20px 30px 50px;
   position: relative;
   margin-left: 20px;
   max-width: 500px;
@@ -261,28 +269,57 @@ header {
 }
 
 .add-margin-top {
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
 /* GALLERY */
 .gallery {
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  flex-direction: column;
+}
+.gallery__wrapper {
   display: grid;
   grid-auto-rows: 1fr;
   grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
   position: relative;
-  width: 100vw;
 }
-.gallery__img {
+@media screen and (min-width: 700px) {
+  .gallery__wrapper {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+.gallery__wrapper__btn {
+  position: absolute;
+  z-index: 1;
+  top: 45%;
+  left: 40%;
+  padding: 20px 60px;
+  background-color: var(--background-blue);
+  font-size: 1.5rem;
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+.gallery__wrapper__img {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
 }
-.gallery__big-img {
+.gallery__wrapper__img__only-on-big {
+  display: none;
+}
+@media screen and (min-width: 700px) {
+  .gallery__wrapper__img__only-on-big {
+    display: block;
+  }
+}
+.gallery__wrapper__big-img {
   width: 100%;
 }
-.gallery__big-img__container {
+.gallery__wrapper__big-img__container {
   align-items: center;
   background-color: #000000;
   bottom: 0;
@@ -299,7 +336,7 @@ header {
   width: 90%;
   z-index: 2;
 }
-.gallery__big-img__btn-hide {
+.gallery__wrapper__big-img__btn-hide {
   background-image: url(./images/icon-gallery-close.png);
   background-size: cover;
   height: 30px;
@@ -364,14 +401,16 @@ header {
 }
 
 /* CONTACT */
-.contact-section {
+.contact {
   background-color: rgb(36, 36, 36);
   color: white;
-  display: block;
+  padding: 100px 0px;
+  display: flex;
+  flex-direction: column;
 }
 
-.contact {
-  background-color: rgb(0, 0, 0);
+.contact__wrapper {
+  display: flex;
 }
 
 .contact a {
@@ -531,9 +570,6 @@ footer a:hover {
 }
 
 @media screen and (min-width: 700px) {
-  .gallery {
-    grid-template-columns: repeat(5, 1fr);
-  }
   .contact__form-wrapper {
     width: 60vw;
     min-width: 400px;
