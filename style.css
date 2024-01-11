@@ -408,97 +408,86 @@ header {
   display: flex;
   flex-direction: column;
 }
-
-.contact__wrapper {
-  display: flex;
-}
-
 .contact a {
   color: white;
 }
-
-.contact__media {
-  align-items: center;
-  background-color: rgb(36, 36, 36);
+@media screen and (min-width: 1000px) {
+  .contact {
+    height: 100vh;
+    display: flex;
+  }
+}
+@media screen and (min-width: 700px) {
+  .contact {
+    display: flex;
+  }
+}
+.contact__wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 40px 40px 0px 40px;
+}
+@media screen and (min-width: 1000px) {
+  .contact__wrapper {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-direction: row;
+  }
 }
 
-.contact__media a {
-  color: white;
-}
-
-.contact__media h2 {
-  padding-bottom: 10px;
-}
-
-.contact__media ul {
-  margin-bottom: 30px;
-}
-
-.contact__media li {
-  align-items: center;
-  display: flex;
-  list-style: none;
-  padding: 10px 0px;
-}
-
-.contact__media img {
-  margin-right: 10px;
-  width: 50px;
-}
-
-.contact__form-wrapper {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  padding-bottom: 50px;
-  padding-top: 100px;
-  width: 100%;
-}
-
-.contact__form {
+.contact__wrapper__form {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0px 10px;
-  padding: 30px;
+  padding-bottom: 50px;
+  padding-top: 100px;
   width: 100%;
 }
-
-.contact__form div {
+@media screen and (min-width: 700px) {
+  .contact__wrapper__form {
+    width: 60vw;
+    min-width: 400px;
+    max-width: 700px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .contact__wrapper__form {
+    padding: 0;
+  }
+}
+.contact__wrapper__form div {
   padding: 10px;
   width: 100%;
 }
-
-.contact__form label {
+@media screen and (min-width: 1000px) {
+  .contact__wrapper__form div {
+    display: flex;
+    align-items: center;
+  }
+}
+.contact__wrapper__form div label {
   width: 40%;
 }
-
-.contact__form__input {
+.contact__wrapper__form__input {
   background-color: transparent;
   border: 1px solid rgb(171, 171, 171);
   color: rgb(215, 215, 215);
   padding: 10px;
   width: 100%;
 }
-
-.contact__form__input::-moz-placeholder {
+.contact__wrapper__form__input ::-moz-placeholder {
   color: rgb(128, 128, 128);
 }
-
-.contact__form__input::placeholder {
+.contact__wrapper__form__input ::placeholder {
   color: rgb(128, 128, 128);
 }
-
-#contact__form__date::-webkit-calendar-picker-indicator {
+.contact__wrapper__form__date::-webkit-calendar-picker-indicator {
   filter: invert(1);
 }
-
-.contact__form__button {
+.contact__wrapper__form__button {
   background-color: var(--logo-orange);
   border-style: none;
   border: 1px solid white;
@@ -506,12 +495,39 @@ header {
   padding: 10px 20px;
   transition: 0.5s;
 }
-
-.contact__form__button:hover {
+.contact__wrapper__form__button:hover {
   background-color: transparent;
   color: white;
   border: 1px solid white;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem var(--neon2), 0 0 0.5rem var(--neon2), 0 0 0.6rem var(--neon2), 0 0 0.8rem var(--neon2), inset 0 0 1.1rem var(--neon2);
+}
+
+.contact__wrapper__media {
+  align-items: center;
+  background-color: rgb(36, 36, 36);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 40px 0px 40px;
+}
+.contact__wrapper__media h2 {
+  padding-bottom: 10px;
+}
+.contact__wrapper__media ul {
+  margin-bottom: 30px;
+}
+.contact__wrapper__media ul li {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  padding: 10px 0px;
+}
+.contact__wrapper__media ul li a {
+  color: white;
+}
+.contact__wrapper__media ul li a img {
+  margin-right: 10px;
+  width: 50px;
 }
 
 /* EFFECTS */
@@ -570,14 +586,6 @@ footer a:hover {
 }
 
 @media screen and (min-width: 700px) {
-  .contact__form-wrapper {
-    width: 60vw;
-    min-width: 400px;
-    max-width: 700px;
-  }
-  .contact-section {
-    display: flex;
-  }
   .display-on-big {
     display: block;
   }
@@ -586,23 +594,6 @@ footer a:hover {
   }
 }
 @media screen and (min-width: 1000px) {
-  .contact__form-wrapper {
-    padding: 0;
-  }
-  .contact-section {
-    height: 100vh;
-    display: flex;
-  }
-  .contact {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  .contact__form div {
-    display: flex;
-    align-items: center;
-  }
   .nav__logo {
     height: 100px;
   }
