@@ -299,23 +299,24 @@ header {
     grid-auto-rows: 1fr;
     grid-template-columns: repeat(2, 1fr);
     overflow: hidden;
-    position: relative;
+    // position: relative;
 
     @media screen and (min-width: 700px) {
       grid-template-columns: repeat(6, 1fr);
     }
 
     &__btn {
-      position: absolute;
-      z-index: 1;
-      top: 45%;
-      left: 40%;
-      padding: 20px 60px;
-      background-color: var(--background-blue);
-      font-size: 1.5rem;
-      color: white;
-      border: 0;
+      background-color: var(--logo-orange);
+      border: none;
+      color: black;
       cursor: pointer;
+      font-size: 1.5rem;
+      padding: 20px 60px;
+      position: absolute;
+      right: 50%;
+      top: 50%;
+      transform: translate(50%,-50%);
+      z-index: 1;
     }
 
     &__img {
@@ -330,12 +331,18 @@ header {
       }
     }
 
-    &__big-img {
-      width: 100%;
+    &__slider {
+      background-color: rgba(0,0,0,0.7);
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: 0;
 
-      &__container {
+      &__wrapper {
         align-items: center;
-        background-color: #000000;
+        background-color: white;
+        border-radius: 10px;
+        border: 5px solid white;
         bottom: 0;
         display: flex;
         height: fit-content;
@@ -348,16 +355,40 @@ header {
         top: 0;
         width: 90%;
         z-index: 2;
+
+        &__img {
+          width: 100%;
+          border-radius: 10px;
+        }
+        &__btn-hide {
+          background-image: url(./images/icon-gallery-close.png);
+          background-size: cover;
+          height: 30px;
+          position: absolute;
+          right: 20px;
+          top: 20px;
+          width: 30px;
+        }
+        &__arrow-left {
+          background-image: url(./images/icon-gallery-arrow-left.png);
+          background-size: cover;
+          height: 40px;
+          left: 0;
+          margin: 10px;
+          position: absolute;
+          width: 40px;
+        }
+        &__arrow-right {
+          background-image: url(./images/icon-gallery-arrow-right.png);
+          background-size: cover;
+          height: 40px;
+          margin: 10px;
+          position: absolute;
+          right: 0;
+          width: 40px;
+        }
       }
-      &__btn-hide {
-        background-image: url(./images/icon-gallery-close.png);
-        background-size: cover;
-        height: 30px;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        width: 30px;
-      }
+      
     }
   }
 }
@@ -369,26 +400,6 @@ header {
 .gray {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
-}
-
-.gallery__big-img__arrow-left {
-  background-image: url(./images/icon-gallery-arrow-left.png);
-  background-size: cover;
-  height: 40px;
-  left: 0;
-  margin: 10px;
-  position: absolute;
-  width: 40px;
-}
-
-.gallery__big-img__arrow-right {
-  background-image: url(./images/icon-gallery-arrow-right.png);
-  background-size: cover;
-  height: 40px;
-  margin: 10px;
-  position: absolute;
-  right: 0;
-  width: 40px;
 }
 
 /* VIDEOS */

@@ -283,7 +283,6 @@ header {
   grid-auto-rows: 1fr;
   grid-template-columns: repeat(2, 1fr);
   overflow: hidden;
-  position: relative;
 }
 @media screen and (min-width: 700px) {
   .gallery__wrapper {
@@ -291,16 +290,17 @@ header {
   }
 }
 .gallery__wrapper__btn {
-  position: absolute;
-  z-index: 1;
-  top: 45%;
-  left: 40%;
-  padding: 20px 60px;
-  background-color: var(--background-blue);
-  font-size: 1.5rem;
-  color: white;
-  border: 0;
+  background-color: var(--logo-orange);
+  border: none;
+  color: black;
   cursor: pointer;
+  font-size: 1.5rem;
+  padding: 20px 60px;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%);
+  z-index: 1;
 }
 .gallery__wrapper__img {
   height: 100%;
@@ -316,12 +316,18 @@ header {
     display: block;
   }
 }
-.gallery__wrapper__big-img {
-  width: 100%;
+.gallery__wrapper__slider {
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
 }
-.gallery__wrapper__big-img__container {
+.gallery__wrapper__slider__wrapper {
   align-items: center;
-  background-color: #000000;
+  background-color: white;
+  border-radius: 10px;
+  border: 5px solid white;
   bottom: 0;
   display: flex;
   height: -moz-fit-content;
@@ -336,7 +342,11 @@ header {
   width: 90%;
   z-index: 2;
 }
-.gallery__wrapper__big-img__btn-hide {
+.gallery__wrapper__slider__wrapper__img {
+  width: 100%;
+  border-radius: 10px;
+}
+.gallery__wrapper__slider__wrapper__btn-hide {
   background-image: url(./images/icon-gallery-close.png);
   background-size: cover;
   height: 30px;
@@ -345,16 +355,7 @@ header {
   top: 20px;
   width: 30px;
 }
-
-.display-on-big {
-  display: none;
-}
-
-.gray {
-  filter: grayscale(100%);
-}
-
-.gallery__big-img__arrow-left {
+.gallery__wrapper__slider__wrapper__arrow-left {
   background-image: url(./images/icon-gallery-arrow-left.png);
   background-size: cover;
   height: 40px;
@@ -363,8 +364,7 @@ header {
   position: absolute;
   width: 40px;
 }
-
-.gallery__big-img__arrow-right {
+.gallery__wrapper__slider__wrapper__arrow-right {
   background-image: url(./images/icon-gallery-arrow-right.png);
   background-size: cover;
   height: 40px;
@@ -372,6 +372,14 @@ header {
   position: absolute;
   right: 0;
   width: 40px;
+}
+
+.display-on-big {
+  display: none;
+}
+
+.gray {
+  filter: grayscale(100%);
 }
 
 /* VIDEOS */
