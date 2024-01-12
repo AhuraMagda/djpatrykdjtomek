@@ -30,6 +30,8 @@ h2 {
   font-size: 2rem;
   margin-bottom: 10px;
   text-align: center;
+  color: white;
+  padding-bottom: 20px;
 }
 
 h3 {
@@ -55,10 +57,18 @@ h4 {
   padding: 15px;
   position: fixed;
   width: 100%;
-  z-index: 2;
+  z-index: 3;
+
+  @media screen and (min-width: 700px) {
+    padding: 15px 40px;
+  }
 
   &__logo {
     height: 70px;
+
+    @media screen and (min-width: 1000px) {
+      height: 100px;
+    }
   }
 
   &__ul {
@@ -299,7 +309,7 @@ header {
     grid-auto-rows: 1fr;
     grid-template-columns: repeat(2, 1fr);
     overflow: hidden;
-    // position: relative;
+    position: relative;
 
     @media screen and (min-width: 700px) {
       grid-template-columns: repeat(6, 1fr);
@@ -315,7 +325,7 @@ header {
       position: absolute;
       right: 50%;
       top: 50%;
-      transform: translate(50%,-50%);
+      transform: translate(50%, -50%);
       z-index: 2;
     }
 
@@ -332,7 +342,7 @@ header {
     }
 
     &__slider {
-      background-color: rgba(0,0,0,0.7);
+      background-color: rgba(0, 0, 0, 0.7);
       height: 100vh;
       width: 100vw;
       position: fixed;
@@ -389,13 +399,15 @@ header {
           width: 40px;
         }
       }
-      
     }
   }
 }
 
 .display-on-big {
   display: none;
+  @media screen and (min-width: 700px) {
+    display: block;
+  }
 }
 
 .gray {
@@ -411,24 +423,28 @@ header {
   flex-direction: column;
   padding: 150px 10px;
   z-index: 0;
-}
 
-.videos {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-}
+  div {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
 
-.videos-section h2 {
-  padding-bottom: 20px;
-}
+    @media screen and (min-width: 1000px) {
+      flex-direction: row;
+    }
+  }
 
-.videos-section video {
-  margin: 10px;
-  max-width: 600px;
-  width: 70%;
+  video {
+    margin: 10px;
+    max-width: 600px;
+    width: 70%;
+
+    @media screen and (min-width: 1000px) {
+      width: 40%;
+    }
+  }
 }
 
 /* CONTACT */
@@ -531,10 +547,6 @@ header {
   justify-content: center;
   padding: 40px 40px 0px 40px;
 
-  h2 {
-    padding-bottom: 10px;
-  }
-
   ul {
     margin-bottom: 30px;
 
@@ -557,23 +569,23 @@ header {
 }
 
 /* EFFECTS */
-.neon-border {
-  box-shadow: 0 0 0.2rem #494949, 0 0 0.2rem #5a5a5a, 0 0 1rem var(--neon),
-    0 0 0.6rem var(--neon), 0 0 0.6rem var(--neon), inset 0 0 0.3rem var(--neon);
-}
+// .neon-border {
+//   box-shadow: 0 0 0.2rem #494949, 0 0 0.2rem #5a5a5a, 0 0 1rem var(--neon),
+//     0 0 0.6rem var(--neon), 0 0 0.6rem var(--neon), inset 0 0 0.3rem var(--neon);
+// }
 
-.neon-border-two {
-  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 1rem var(--neon2),
-    0 0 0.6rem var(--neon2), 0 0 1.6rem var(--neon2),
-    inset 0 0 1.1rem var(--neon2);
-}
+// .neon-border-two {
+//   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 1rem var(--neon2),
+//     0 0 0.6rem var(--neon2), 0 0 1.6rem var(--neon2),
+//     inset 0 0 1.1rem var(--neon2);
+// }
 
-.neonText {
-  color: var(--neon);
-  text-shadow: 0 0 7px var(--neon), 0 0 10px var(--neon), 0 0 11px var(--neon),
-    0 0 2px var(--neon), 0 0 2px var(--neon), 0 0 2px var(--neon),
-    0 0 2px var(--neon), 0 0 0px var(--neon);
-}
+// .neonText {
+//   color: var(--neon);
+//   text-shadow: 0 0 7px var(--neon), 0 0 10px var(--neon), 0 0 11px var(--neon),
+//     0 0 2px var(--neon), 0 0 2px var(--neon), 0 0 2px var(--neon),
+//     0 0 2px var(--neon), 0 0 0px var(--neon);
+// }
 
 @keyframes slide {
   0% {
@@ -598,7 +610,7 @@ header {
 
 footer {
   background-color: #000000;
-  
+
   & div {
     color: var(--text-white);
     display: flex;
@@ -617,29 +629,6 @@ footer {
     &:hover {
       color: var(--logo-orange);
     }
-  }
-}
-
-@media screen and (min-width: 700px) {
-  .display-on-big {
-    display: block;
-  }
-  nav {
-    padding: 15px 40px;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .nav__logo {
-    height: 100px;
-  }
-
-  .videos {
-    flex-direction: row;
-  }
-
-  .videos video {
-    width: 40%;
   }
 }
 
@@ -665,11 +654,11 @@ footer {
   position: fixed;
   width: 100vw;
   z-index: 999;
-}
 
-#preloader img {
-  width: 200px;
-  margin-bottom: 20px;
+  img {
+    width: 200px;
+    margin-bottom: 20px;
+  }
 }
 
 .dot-stretching {
