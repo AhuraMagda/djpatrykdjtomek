@@ -72,16 +72,26 @@ h4 {
 .nav__ul {
   align-items: center;
   background-color: var(--background-blue);
-  border: 2px solid black;
+  border: 1px solid var(--logo-orange);
+  border-right: none;
+  border-radius: 5px 0px 0px 5px;
   display: flex;
   flex-direction: column;
-  height: 60vh;
+  height: 70vh;
   justify-content: center;
   position: absolute;
   right: 0;
   text-align: center;
-  top: 15vh;
+  top: 17vh;
   transform: translate(100%);
+  width: 80%;
+  transition: transform 2000ms;
+}
+@media screen and (min-width: 700px) {
+  .nav__ul {
+    top: 13vh;
+    width: 350px;
+  }
 }
 .nav__ul li {
   color: rgb(206, 205, 205);
@@ -94,7 +104,6 @@ h4 {
 }
 .nav__ul__active {
   transform: translate(0%);
-  width: 100%;
 }
 
 /* NAVIGATION Hamburger */
@@ -456,7 +465,6 @@ header {
   justify-content: center;
   margin: 0px 10px;
   padding: 25px 0px 50px 0px;
-  width: 100%;
 }
 @media screen and (min-width: 700px) {
   .contact__wrapper__form {
@@ -531,7 +539,8 @@ header {
 .contact__wrapper__media ul li a {
   color: white;
 }
-.contact__wrapper__media ul li a img {
+
+.media-icon {
   margin-right: 10px;
   width: 50px;
 }

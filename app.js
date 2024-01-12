@@ -2,22 +2,26 @@
 
 const galleryImages = document.querySelectorAll(".gallery__wrapper__img");
 
-const changeImgColor = (image) => {
+const changeImgColor = image => {
   image.classList.toggle("gray");
 };
 
-galleryImages.forEach((image) => {
+galleryImages.forEach(image => {
   image.addEventListener("mouseover", function () {
     changeImgColor(image);
   });
   image.addEventListener("mouseout", function () {
     changeImgColor(image);
   });
-  image.addEventListener("click", function () {
-    showBigImage(image);
-  });
 });
 
+const sliderImages = document.querySelectorAll(".slider-img") 
+
+sliderImages.forEach(image => {
+  image.addEventListener("click", function () {
+    showSlider(image);
+  });
+})
 
 // GALLERY IMAGES - make img bigger and put it in the center
 
@@ -41,7 +45,7 @@ arrowRight.classList.add("gallery__wrapper__slider__wrapper__arrow-right");
 
 const gallery = document.querySelector(".gallery");
 
-const showBigImage = (image) => {
+const showSlider = image => {
   sliderImg.src = image.src;
   sliderImg.id = image.id;
   gallery.appendChild(slider);
