@@ -483,7 +483,7 @@ header {
   flex-direction: column;
   justify-content: center;
   margin: 0px 10px;
-  padding: 25px 0px 50px 0px;
+  padding: 0px 0px 50px 0px;
   
   @media screen and (min-width: 700px) {
     width: 60vw;
@@ -491,6 +491,10 @@ header {
     max-width: 700px;
   }
 
+  p {
+    padding: 10px;
+  }
+  
   div {
     padding: 10px;
     width: 100%;
