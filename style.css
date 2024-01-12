@@ -411,17 +411,6 @@ header {
 .contact a {
   color: white;
 }
-@media screen and (min-width: 1000px) {
-  .contact {
-    height: 100vh;
-    display: flex;
-  }
-}
-@media screen and (min-width: 700px) {
-  .contact {
-    display: flex;
-  }
-}
 .contact__wrapper {
   display: flex;
   flex-direction: column;
@@ -442,7 +431,7 @@ header {
   flex-direction: column;
   justify-content: center;
   margin: 0px 10px;
-  padding: 50px 0px;
+  padding: 25px 0px 50px 0px;
   width: 100%;
 }
 @media screen and (min-width: 700px) {
@@ -450,11 +439,6 @@ header {
     width: 60vw;
     min-width: 400px;
     max-width: 700px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .contact__wrapper__form {
-    padding: 0;
   }
 }
 .contact__wrapper__form div {
