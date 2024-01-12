@@ -30,16 +30,15 @@ h2 {
   font-size: 2rem;
   margin-bottom: 10px;
   text-align: center;
-  color: white;
-  padding-bottom: 20px;
 }
 
 h3 {
   font-size: 2.5rem;
-  background-color: rgb(36, 36, 36);
   color: white;
   padding-top: 30px;
   text-align: center;
+  color: white;
+  padding-bottom: 20px;
 }
 
 h4 {
@@ -172,6 +171,7 @@ header {
   font-size: clamp(30px, 6vw, 55px);
   margin-top: 10px;
   margin-bottom: 0px;
+  padding: 0px;
   text-align: center;
 }
 
@@ -333,12 +333,6 @@ header {
       height: 100%;
       object-fit: cover;
       width: 100%;
-      &__only-on-big {
-        display: none;
-        @media screen and (min-width: 700px) {
-          display: block;
-        }
-      }
     }
 
     &__slider {
@@ -403,7 +397,7 @@ header {
   }
 }
 
-.display-on-big {
+.only-on-big {
   display: none;
   @media screen and (min-width: 700px) {
     display: block;
@@ -452,7 +446,7 @@ header {
 .contact {
   background-color: rgb(36, 36, 36);
   color: white;
-  padding: 50px 0px;
+  padding: 50px 20px;
   display: flex;
   flex-direction: column;
 
@@ -482,8 +476,7 @@ header {
   justify-content: center;
   margin: 0px 10px;
   padding: 25px 0px 50px 0px;
-  width: 100%;
-
+  
   @media screen and (min-width: 700px) {
     width: 60vw;
     min-width: 400px;
