@@ -368,6 +368,7 @@ header {
       height: 100%;
       object-fit: cover;
       width: 100%;
+      transition: 300ms ease-out;
     }
 
     &__slider {

@@ -355,6 +355,7 @@ header {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
+  transition: 300ms ease-out;
 }
 .gallery__wrapper__slider {
   background-color: rgba(0, 0, 0, 0.7);
