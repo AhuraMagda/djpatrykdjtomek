@@ -1,54 +1,63 @@
 // GALLERY IMAGES - change color
 
-const galleryImages = document.querySelectorAll(".gallery__img");
+const galleryImages = document.querySelectorAll(".gallery__wrapper__img");
 
-const changeImgColor = (image) => {
+const changeImgColor = image => {
   image.classList.toggle("gray");
 };
 
-galleryImages.forEach((image) => {
+galleryImages.forEach(image => {
   image.addEventListener("mouseover", function () {
     changeImgColor(image);
   });
   image.addEventListener("mouseout", function () {
     changeImgColor(image);
   });
-  image.addEventListener("click", function () {
-    showBigImage(image);
-  });
 });
+
+const sliderImages = document.querySelectorAll(".slider-img") 
+
+sliderImages.forEach(image => {
+  image.addEventListener("click", function () {
+    showSlider(image);
+  });
+})
 
 // GALLERY IMAGES - make img bigger and put it in the center
 
-const bigImageContainer = document.createElement("div");
-bigImageContainer.classList.add("gallery__big-img__container");
+const slider = document.createElement("div");
+slider.classList.add("gallery__wrapper__slider");
 
-const bigImage = document.createElement("img");
-bigImage.classList.add("gallery__big-img");
+const sliderWrapper = document.createElement("div");
+sliderWrapper.classList.add("gallery__wrapper__slider__wrapper");
+
+const sliderImg = document.createElement("img");
+sliderImg.classList.add("gallery__wrapper__slider__wrapper__img");
 
 const hideBigImageButton = document.createElement("span");
-hideBigImageButton.classList.add("gallery__big-img__btn-hide");
+hideBigImageButton.classList.add("gallery__wrapper__slider__wrapper__btn-hide");
 
 const arrowLeft = document.createElement("span");
-arrowLeft.classList.add("gallery__big-img__arrow-left");
+arrowLeft.classList.add("gallery__wrapper__slider__wrapper__arrow-left");
 
 const arrowRight = document.createElement("span");
-arrowRight.classList.add("gallery__big-img__arrow-right");
+arrowRight.classList.add("gallery__wrapper__slider__wrapper__arrow-right");
 
 const gallery = document.querySelector(".gallery");
 
-const showBigImage = (image) => {
-  bigImage.src = image.src;
-  bigImage.id = image.id;
-  gallery.appendChild(bigImageContainer);
-  bigImageContainer.appendChild(arrowLeft);
-  bigImageContainer.appendChild(bigImage);
-  bigImageContainer.appendChild(arrowRight);
-  bigImageContainer.appendChild(hideBigImageButton);
+const showSlider = image => {
+  sliderImg.src = image.src;
+  sliderImg.id = image.id;
+  gallery.appendChild(slider);
+  slider.appendChild(sliderWrapper)
+  sliderWrapper.appendChild(arrowLeft);
+  sliderWrapper.appendChild(sliderImg);
+  sliderWrapper.appendChild(arrowRight);
+  sliderWrapper.appendChild(hideBigImageButton);
 };
 
 const hideBigImage = () => {
-  gallery.removeChild(bigImageContainer);
+  gallery.removeChild(slider);
 };
 
 const changeImgRight = () => {
@@ -56,10 +65,10 @@ const changeImgRight = () => {
   let lastIndex = galleryImages.length - 1;
   galleryImages.forEach(
     (image, index) =>
-      image.id === bigImage.id && (newId = index === lastIndex ? 0 : index + 1)
+      image.id === sliderImg.id && (newId = index === lastIndex ? 0 : index + 1)
   );
-  bigImage.src = galleryImages[newId].src;
-  bigImage.id = galleryImages[newId].id;
+  sliderImg.src = galleryImages[newId].src;
+  sliderImg.id = galleryImages[newId].id;
 };
 
 const changeImgLeft = () => {
@@ -67,14 +76,23 @@ const changeImgLeft = () => {
   let lastIndex = galleryImages.length - 1;
   galleryImages.forEach(
     (image, index) =>
-      image.id === bigImage.id && (newId = index === 0 ? lastIndex : index - 1)
+      image.id === sliderImg.id && (newId = index === 0 ? lastIndex : index - 1)
   );
-  bigImage.src = galleryImages[newId].src;
-  bigImage.id = galleryImages[newId].id;
+  sliderImg.src = galleryImages[newId].src;
+  sliderImg.id = galleryImages[newId].id;
 };
 
-arrowRight.addEventListener("click", changeImgRight);
-arrowLeft.addEventListener("click", changeImgLeft);
+slider.addEventListener("click", hideBigImage)
+
+arrowRight.addEventListener("click", (e)=> {
+  changeImgRight();
+  e.stopPropagation();
+});
+
+arrowLeft.addEventListener("click", (e) => {
+  changeImgLeft();
+  e.stopPropagation();
+});
 
 hideBigImageButton.addEventListener("click", hideBigImage);
 
@@ -87,13 +105,13 @@ const hamburgerBottomBun = document.querySelector(".bottom-bun");
 const hamburgerMeat = document.querySelector(".meat");
 
 const changeBurgerToX = () => {
-  hamburgerTopBun.classList.toggle("hamburger--top-bun_clicked");
-  hamburgerBottomBun.classList.toggle("hamburger--bottom-bun_clicked");
-  hamburgerMeat.classList.toggle("hamburger--meat_clicked");
+  hamburgerTopBun.classList.toggle("hamburger__top-bun_clicked");
+  hamburgerBottomBun.classList.toggle("hamburger__bottom-bun_clicked");
+  hamburgerMeat.classList.toggle("hamburger__meat_clicked");
 };
 
 burgerIcon.addEventListener("click", function () {
-  mobileNav.classList.toggle("nav-active");
+  mobileNav.classList.toggle("nav__ul__active");
   changeBurgerToX();
 });
 
@@ -101,7 +119,7 @@ burgerIcon.addEventListener("click", function () {
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    mobileNav.classList.remove("nav-active");
+    mobileNav.classList.remove("nav__ul__active");
     changeBurgerToX();
   });
 });
