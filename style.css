@@ -205,6 +205,19 @@ header {
   top: -30%;
   width: 90vw;
 }
+.intro__back__img-up__desktop {
+  display: none;
+}
+@media screen and (min-width: 480px) {
+  .intro__back__img-up__desktop {
+    display: block;
+  }
+}
+@media screen and (min-width: 480px) {
+  .intro__back__img-up__mobile {
+    display: none;
+  }
+}
 .intro__back__img-down {
   animation: infinite-spinning 50s infinite linear;
   bottom: -40%;
@@ -214,6 +227,19 @@ header {
   position: absolute;
   right: -50%;
   width: 100vw;
+}
+.intro__back__img-down__desktop {
+  display: none;
+}
+@media screen and (min-width: 480px) {
+  .intro__back__img-down__desktop {
+    display: block;
+  }
+}
+@media screen and (min-width: 480px) {
+  .intro__back__img-down__mobile {
+    display: none;
+  }
 }
 
 @keyframes infinite-spinning {
@@ -595,7 +621,7 @@ footer a:hover {
   color: var(--logo-orange);
 }
 
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: 1000px) {
   .intro__back-img-up {
     left: -15%;
   }

@@ -1,5 +1,10 @@
 /* GLOBAL */
 
+$screen-medium: 480px;
+$screen-large: 700px;
+$screen-xlarge: 1000px;
+
+
 * {
   margin: 0;
   padding: 0;
@@ -58,14 +63,14 @@ h4 {
   width: 100%;
   z-index: 3;
 
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: $screen-large) {
     padding: 15px 40px;
   }
 
   &__logo {
     height: 70px;
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: $screen-xlarge) {
       height: 100px;
     }
   }
@@ -88,7 +93,7 @@ h4 {
     width: 80%;
     transition: transform 2000ms;
 
-    @media screen and (min-width: 700px) {
+    @media screen and (min-width: $screen-large) {
       top: 13vh;
       width: 350px;
     }
@@ -211,6 +216,17 @@ header {
     position: absolute;
     top: -30%;
     width: 90vw;
+    &__desktop {
+      display: none;
+      @media screen and (min-width: $screen-medium) {
+        display: block;
+      }
+    }
+    &__mobile {
+      @media screen and (min-width: $screen-medium) {
+        display: none;
+      }
+    }
   }
   &__img-down {
     animation: infinite-spinning 50s infinite linear;
@@ -221,6 +237,17 @@ header {
     position: absolute;
     right: -50%;
     width: 100vw;
+    &__desktop {
+      display: none;
+      @media screen and (min-width: $screen-medium) {
+        display: block;
+      }
+    }
+    &__mobile {
+      @media screen and (min-width: $screen-medium) {
+        display: none;
+      }
+    }
   }
 }
 
@@ -406,14 +433,14 @@ header {
 }
 
 .only-on-mobile {
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: $screen-large) {
     display: none;
   }
 }
 
 .only-on-big {
   display: none;
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: $screen-large) {
     display: block;
   }
 }
@@ -439,7 +466,7 @@ header {
     flex-direction: column;
     justify-content: center;
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: $screen-xlarge) {
       flex-direction: row;
     }
   }
@@ -449,7 +476,7 @@ header {
     max-width: 600px;
     width: 70%;
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: $screen-xlarge) {
       width: 40%;
     }
   }
@@ -472,7 +499,7 @@ header {
     display: flex;
     flex-direction: column;
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: $screen-xlarge) {
       align-items: center;
       display: flex;
       justify-content: center;
@@ -491,7 +518,7 @@ header {
   margin: 0px 10px;
   padding: 0px 0px 50px 0px;
   
-  @media screen and (min-width: 700px) {
+  @media screen and (min-width: $screen-large) {
     width: 60vw;
     min-width: 400px;
     max-width: 700px;
@@ -505,7 +532,7 @@ header {
     padding: 10px;
     width: 100%;
 
-    @media screen and (min-width: 1000px) {
+    @media screen and (min-width: $screen-xlarge) {
       display: flex;
       align-items: center;
     }
@@ -642,7 +669,7 @@ footer {
   }
 }
 
-@media screen and (min-width: 1800px) {
+@media screen and (min-width: $screen-xlarge) {
   .intro__back-img-up {
     left: -15%;
   }
