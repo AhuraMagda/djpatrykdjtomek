@@ -389,6 +389,12 @@ header {
   width: 40px;
 }
 
+@media screen and (min-width: 700px) {
+  .only-on-mobile {
+    display: none;
+  }
+}
+
 .only-on-big {
   display: none;
 }

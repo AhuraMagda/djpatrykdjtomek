@@ -405,6 +405,12 @@ header {
   }
 }
 
+.only-on-mobile {
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
+}
+
 .only-on-big {
   display: none;
   @media screen and (min-width: 700px) {
