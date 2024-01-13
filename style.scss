@@ -4,7 +4,6 @@ $screen-medium: 480px;
 $screen-large: 700px;
 $screen-xlarge: 1000px;
 
-
 * {
   margin: 0;
   padding: 0;
@@ -518,7 +517,7 @@ header {
   justify-content: center;
   margin: 0px 10px;
   padding: 0px 0px 50px 0px;
-  
+
   @media screen and (min-width: $screen-large) {
     width: 60vw;
     min-width: 400px;
@@ -528,7 +527,7 @@ header {
   p {
     padding: 10px;
   }
-  
+
   div {
     padding: 10px;
     width: 100%;
@@ -606,24 +605,6 @@ header {
   margin-right: 10px;
   width: 50px;
 }
-/* EFFECTS */
-// .neon-border {
-//   box-shadow: 0 0 0.2rem #494949, 0 0 0.2rem #5a5a5a, 0 0 1rem var(--neon),
-//     0 0 0.6rem var(--neon), 0 0 0.6rem var(--neon), inset 0 0 0.3rem var(--neon);
-// }
-
-// .neon-border-two {
-//   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 1rem var(--neon2),
-//     0 0 0.6rem var(--neon2), 0 0 1.6rem var(--neon2),
-//     inset 0 0 1.1rem var(--neon2);
-// }
-
-// .neonText {
-//   color: var(--neon);
-//   text-shadow: 0 0 7px var(--neon), 0 0 10px var(--neon), 0 0 11px var(--neon),
-//     0 0 2px var(--neon), 0 0 2px var(--neon), 0 0 2px var(--neon),
-//     0 0 2px var(--neon), 0 0 0px var(--neon);
-// }
 
 @keyframes slide {
   0% {
