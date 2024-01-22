@@ -27,6 +27,9 @@
             color: white;
             padding-bottom: 20px;
         }
+        h2 {
+            padding-top: 20px;
+        }
         body {
             background-color: #151641;
         }
@@ -57,6 +60,7 @@
     $phone = $_POST["contact__form__phone"];
     $email = $_POST["contact__form__email"];
     $date = $_POST["contact__form__date"];
+    $type = $_POST["contact__form__type"];
     $place = $_POST["contact__form__place"];
     $time = $_POST["contact__form__time"];
     $guests = $_POST["contact__form__guests"];
@@ -73,6 +77,7 @@
 
     <h2>Informacje</h2>
     <p>Data: $date</p>
+    <p>Rodzaj: $type</p>
     <p>Czas trwania: $time</p>
     <p>Miejscowość: $place</p>
     <p>Liczba gości: $guests</p>

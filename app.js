@@ -15,7 +15,7 @@ galleryImages.forEach(image => {
   });
 });
 
-const sliderImages = document.querySelectorAll(".slider-img") 
+const sliderImages = document.querySelectorAll(".slider-img")
 
 sliderImages.forEach(image => {
   image.addEventListener("click", function () {
@@ -84,7 +84,7 @@ const changeImgLeft = () => {
 
 slider.addEventListener("click", hideBigImage)
 
-arrowRight.addEventListener("click", (e)=> {
+arrowRight.addEventListener("click", (e) => {
   changeImgRight();
   e.stopPropagation();
 });
