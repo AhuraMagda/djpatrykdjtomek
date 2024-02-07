@@ -19,6 +19,7 @@ This is a website made for DJ Patryk DJ Tomek.
 - Mobile First Design
 - JavaScript
 - PHP
+- SCSS
 
 ### Useful resources
 - PHPMailer
