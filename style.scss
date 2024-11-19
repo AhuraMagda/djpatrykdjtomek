@@ -13,6 +13,7 @@ $screen-xlarge: 1000px;
 
 :root {
   --text-white: #cbcbcb;
+  --bgd-white: #FFF;
   --logo-blue: #2d2e83;
   --logo-orange: #f18318;
   --logo-pink: #e6007e;
@@ -350,10 +351,11 @@ header {
     }
 
     &__btn {
-      background-color: var(--logo-orange);
+      background-color: var(--bgd-white);
       border: none;
       color: black;
       cursor: pointer;
+      border-radius: 50px;
       font-size: 1.5rem;
       padding: 20px 60px;
       position: absolute;
